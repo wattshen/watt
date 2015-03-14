@@ -1,6 +1,11 @@
-#! /usr/bin/python
+#!/usr/bin/env python
+#coding: utf-8 
+#Author: Wattshen
+#Email:34665115@qq.com
+#Filename: hello.py
+#Date: - - 
+#Content:
 
-#filename:hello.py
 'i love you'
 
 name = raw_input\
@@ -14,6 +19,10 @@ number = 23
 guess = int(raw_input('Enter an integer : '))
 
 while guess != number:
+	if guess < number:
+		print "it's too small, please type a big one..."
+	else:
+		print "it's too big, please type a small one..."
 	guess = int(raw_input('This time is wrong, enter anther integer:'))
 else:
 	format = ('hello,%s! Congratulations to you, you guessed it, it is %s')
