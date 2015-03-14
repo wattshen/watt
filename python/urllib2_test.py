@@ -8,6 +8,6 @@ import urllib2
 response = urllib2.urlopen('http://www.baidu.com')
 html = response.read()
 print html
-f = open(r'e:\test\url_text.html','a')
+f = open(r'g:\watt\test\url_text.html','a')
 f.write(html)
 f.close()
