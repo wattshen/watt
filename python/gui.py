@@ -1,6 +1,17 @@
+<<<<<<< HEAD
 #! /usr/bin/python
 
 #filename:hello.py
+=======
+#!/usr/bin/env python
+#coding: utf-8 
+#Author: Wattshen
+#Email:34665115@qq.com
+#Date:
+#Filename: hello.py
+#Content:
+
+>>>>>>> xw
 
 i = 0
 while i < 50:

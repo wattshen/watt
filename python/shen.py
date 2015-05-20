@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+#!/usr/bin/env python
+#coding: utf-8 
+#Author: Wattshen
+#Filename: shen.py
+#Date:2015-3-14
+#Content:
+
+
+print '加上一行#coding: utf-8 就可以输出中文！'
+>>>>>>> xw
 def xunh(n):
 	i=result= 1
 	#result = n
@@ -10,6 +22,10 @@ def xunh(n):
 print xunh(5)
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> xw
 def forh(n):
 	result = n
 	for i in range(1, n):

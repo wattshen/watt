@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+#!/usr/bin/env python
+#coding: utf-8 
+#Author: Wattshen
+#Email:34665115@qq.com
+#Date:
+#Filename: 
+#Content:
+
+
+>>>>>>> xw
 def searchs(seq, number, low = 0, up = None):
 	if up is None: up = len(seq) -1
 	if low == up:

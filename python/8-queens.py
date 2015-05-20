@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+#!/usr/bin/env python
+#coding: utf-8 
+#Author: Wattshen
+#Email:34665115@qq.com
+#Date:
+#Filename: 
+#Content:
+
+>>>>>>> xw
 def conflict(state,nextX):  
     nextY = len(state)
     for i in range(nextY):

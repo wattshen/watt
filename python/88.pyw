@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> xw
 def conflict(state,nextX):  
     nextY = len(state)
     for i in range(nextY):

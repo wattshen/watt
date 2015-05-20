@@ -1,0 +1,12 @@
+#include <stdio.h>
+/* print zhi fang tu.*/
+
+int ndigtal,nspace;
+
+int main(void){
+
+
+
+
+
+}

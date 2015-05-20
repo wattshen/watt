@@ -1,7 +1,10 @@
 #!/usr/bin/env python
-#coding=gbk
-#coding=utf-8
-#-*- coding: UTF-8 -*- 
+#coding: utf-8 
+#Author: Wattshen
+#Email:34665115@qq.com
+#Date:
+#Filename: 
+#Content:
 
 import os,os.path
 import shutil,string
