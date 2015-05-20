@@ -1,3 +1,11 @@
+#!/usr/bin/env python
+#coding: utf-8 
+#Author: Wattshen
+#Email:34665115@qq.com
+#Date:
+#Filename: 
+#Content:
+
 class Foobar:
 	def __init__(self):
 		self.somevar = 42

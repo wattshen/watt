@@ -1,3 +1,12 @@
+#!/usr/bin/env python
+#coding: utf-8 
+#Author: Wattshen
+#Email:34665115@qq.com
+#Date:
+#Filename: 
+#Content:
+
+
 d = {'x':1, 'y':2, 'z':3}
 for key in d:
 	print key, 'corresponds', d[key]

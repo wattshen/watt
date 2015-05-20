@@ -1,7 +1,9 @@
 #!/usr/bin/env python
-#coding=gbk
-#coding=utf-8
-#-*- coding: UTF-8 -*- 
+#coding: utf-8 
+#Author: Wattshen
+#Date:
+#Filename: 
+#Content:
 
 #导入urllib2模块,并以之打开URL资源,再以read读取,并交之存到文件
 import urllib2

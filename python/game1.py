@@ -1,3 +1,11 @@
+#!/usr/bin/env python
+#coding: utf-8 
+#Author: Wattshen
+#Email:34665115@qq.com
+#Date:
+#Filename: 
+#Content:
+
 #运行游戏后，玩家首先要进行语音的选择，1选择英语，2选择汉语，其他则默认选择英语
 #根据玩家选择的语音，进入不同的语音环境
 #游戏规则：玩家输入一个0-9的数字，系统根据玩家输入的数字，打印出数字的信息

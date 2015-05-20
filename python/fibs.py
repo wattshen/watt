@@ -1,3 +1,11 @@
+#!/usr/bin/env python
+#coding: utf-8 
+#Author: Wattshen
+#Email:34665115@qq.com
+#Date:
+#Filename: 
+#Content:
+
 # fibs by function(for)
 num = int(raw_input("please input a number, I'll given you a fibs ..."))
 

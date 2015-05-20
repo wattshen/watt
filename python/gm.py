@@ -1,7 +1,10 @@
 #!/usr/bin/env python
-#coding=gbk
-#coding=utf-8
-#-*- coding: UTF-8 -*- 
+#coding: utf-8 
+#Author: Wattshen
+#Email:34665115@qq.com
+#Date:
+#Filename: 
+#Content:
 
 #将'Peo sp20070701.mp3' 改名为 'sp20070701_Peo.mp3'
 

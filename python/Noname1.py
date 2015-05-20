@@ -1,3 +1,10 @@
+#!/usr/bin/env python
+#coding: utf-8 
+#Author: Wattshen
+#Date:
+#Filename: 
+#Content:
+
 import cmath
 print cmath.sqrt(-10)
 print pow(2,3,5)

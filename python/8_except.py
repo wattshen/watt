@@ -1,3 +1,12 @@
+#!/usr/bin/env python
+#coding: utf-8 
+#Author: Wattshen
+#Email:34665115@qq.com
+#Date:
+#Filename: 
+#Content:
+
+
 class My_e(Exception):
 	print 'this is my frist Exception'
 while True:

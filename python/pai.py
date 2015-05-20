@@ -1,3 +1,10 @@
+#!/usr/bin/env python
+#coding: utf-8 
+#Author: Wattshen
+#Date:
+#Filename: 
+#Content:
+
 from pprint import pprint
 from random import shuffle
 
