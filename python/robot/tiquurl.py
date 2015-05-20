@@ -1,13 +1,17 @@
 #!/usr/bin/env python
-#coding:utf-8
-#filename:提取远程HTML页面包含的链出URL
-#date:2015年5月16日
+#coding: utf-8 
+#Author: Wattshen
+#Email:34665115@qq.com
+#Date:2015年5月16日
+#Filename:tiquurl.py
+#Content:提取远程HTML页面包含的链出URL
 
 #导入urllib2模块,并以之打开URL资源,再以read读取,并将之存到文件
+
 import urllib2
 import re
 
-page_url = 'http://www.baidu.com'
+page_url = 'http://www.qq.com'
 
 #获取页面内容
 def getHtml(url):
@@ -31,12 +35,12 @@ links = getLink(htmls)
 #print links
 
 #将结果存储到文件，并按元素换行
-f1 = open(r'C:\Users\Administrator\Desktop\robot\file1.txt','w')
+f1 = open(r'file1.txt','w')
 f1.write(htmls)
 f1.close()
 
-f2 = open(r'C:\Users\Administrator\Desktop\robot\file2.txt','w')
+f2 = open(r'file2.txt','w')
 for element in links:
-	f2.write(str(element)+'\n')
-#f2.write(str(links))
+	f2.write(str(element)+'\n')#存储为一行一个
+#f2.write(str(links))#不换行存储
 f2.close()
