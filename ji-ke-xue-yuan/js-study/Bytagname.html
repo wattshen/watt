@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="Generator" content="">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title></title>
+</head>
+<body>
+  <div id='' class=''>
+  
+  <p name="pid">i love you.</p>
+  <p name="pid">i love you.</p>
+  
+  
+  
+ <script>	
+	function getName() {
+		//var count=document.getElementsByTagName("p");
+		//alert(count.lenth);
+		//var p=count[0];
+		//p.innerHTML="你好世界。";
+		document.getElementsByTagName("p")[0].innerHTML="你好世界！你好世界！你好世界！你好世界！";
+		document.getElementsByName("pid")[1].innerHTML="我是一个好人";
+		alert(document.getElementsByName("pid")[1].getAttribute("name"));
+		document.write(document.getElementsByName("pid")[1].getAttribute("name"));
+		document.write(document.getElementsByName("pid")[1].getAttribute("name")&&"  love you");//注意上一个输入被替换掉了
+		document.getElementsByName("pid")[1].setAttribute("align","center");
+		alert(document.getElementsByName("pid")[1].getAttribute("align"));
+	}
+	getName();
+</script>
+  
+  
+  
+  
+  
+  </div>
+
+</body>
+</html>

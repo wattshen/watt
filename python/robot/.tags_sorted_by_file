@@ -1,0 +1,45 @@
+f1	tiquurl.py	/^f1 = open(r'G:\\watt\\python\\robot\\file1.txt','w')$/;"	v
+f2	tiquurl.py	/^f2 = open(r'G:\\watt\\python\\robot\\file2.txt','w')$/;"	v
+getHtml	tiquurl.py	/^def getHtml(url):$/;"	f
+getLink	tiquurl.py	/^def getLink(html):$/;"	f
+getTitle	tiquurl.py	/^def getTitle(html):$/;"	f
+htmls	tiquurl.py	/^htmls = getHtml(page_url)$/;"	v
+links	tiquurl.py	/^links = getLink(htmls)$/;"	v
+page_url	tiquurl.py	/^page_url = 'http:\/\/www.sina.com.cn'$/;"	v
+re	tiquurl.py	/^import re$/;"	i
+title	tiquurl.py	/^title = getTitle(htmls)$/;"	v
+urllib2	tiquurl.py	/^import urllib2$/;"	i
+content	xpath.py	/^content = selector.xpath('\/\/div\/li\/a\/@href')$/;"	v
+etree	xpath.py	/^from lxml import etree$/;"	i
+getHtml	xpath.py	/^def getHtml(url):$/;"	f
+html	xpath.py	/^html = getHtml(url)$/;"	v
+selector	xpath.py	/^selector = etree.HTML(html)$/;"	v
+url	xpath.py	/^url = 'http:\/\/www.sohu.com'$/;"	v
+urllib2	xpath.py	/^import urllib2$/;"	i
+get_html	zhua.py	/^def get_html(url,ua):$/;"	f
+requests	zhua.py	/^import requests$/;"	i
+ua	zhua.py	/^ua = 'User-Agent:Mozilla\/5.0 (Windows NT 6.1; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/43.0.2357.81 Safari\/537.36'$/;"	v
+url	zhua.py	/^url = 'http:\/\/tieba.baidu.com'$/;"	v
+HTML	zhua_qu_page.py	/^class HTML(object):$/;"	c
+StringIO	zhua_qu_page.py	/^import StringIO$/;"	i
+TDK	zhua_qu_page.py	/^TDK = html.getTDK(htmls)$/;"	v
+a	zhua_qu_page.py	/^a = html.getA(htmls)$/;"	v
+f1	zhua_qu_page.py	/^f1 = open(r'G:\\watt\\python\\robot\\file1.txt','w')$/;"	v
+f2	zhua_qu_page.py	/^f2 = open(r'G:\\watt\\python\\robot\\file2.txt','w')$/;"	v
+getA	zhua_qu_page.py	/^	def getA(self,html):$/;"	m	class:HTML
+getHtml	zhua_qu_page.py	/^	def getHtml(self,url):$/;"	m	class:HTML
+getHtml_gzip	zhua_qu_page.py	/^	def getHtml_gzip(self,url):$/;"	m	class:HTML
+getTDK	zhua_qu_page.py	/^	def getTDK(self,html):#缺少self时会提示多传了一个参数$/;"	m	class:HTML
+gzip	zhua_qu_page.py	/^import gzip$/;"	i
+html	zhua_qu_page.py	/^html = HTML()$/;"	v
+htmls	zhua_qu_page.py	/^	htmls = html.getHtml_gzip(pageurl)$/;"	v	class:HTML
+htmls	zhua_qu_page.py	/^htmls = html.getHtml(pageurl)$/;"	v
+pageurl	zhua_qu_page.py	/^pageurl = 'http:\/\/www.baidu.com'$/;"	v
+re	zhua_qu_page.py	/^import re$/;"	i
+urllib2	zhua_qu_page.py	/^import urllib2$/;"	i
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_PROGRAM_VERSION	5.8	//
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/

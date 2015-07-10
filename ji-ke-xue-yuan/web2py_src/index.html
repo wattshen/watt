@@ -1,0 +1,111 @@
+<html>
+<head>
+
+<script language="JavaScript" src="单例.js">
+<style>
+#pid{
+	background:red;
+}
+</style>
+</head>
+<body>
+<a id="aid" href="http://www.jikexueyuan.com"><img id="imgid" src="http://s1.jikexueyuan.com/common/images/logo_c8caff4.png" width="113px" height="41px"></a><br />
+<hr /><hr />
+<script>
+	var x = 5
+	document.write("输出字符串时要加引号，输出变量时不用加引号,下面输出变量X的值，请看：X＝");
+	document.write(x);
+</script>
+<p id="pid">i = 25, j = 10</p>
+<p>i + j = <span id = "sum"><button onclick = "mysum()">和</button></span></p>
+
+<p>i - j = <span id = "cha"><button onclick = "cha()">差</button></span></p>
+<p>i * j = <span id = "ji"><button onclick = "ji()">积</button></span></p>
+<p>i / j = <span id = "shang"><button onclick = "shang()">商</button></span></p>
+<p>i % j = <span id = "yu"><button onclick = "yu()">余</button></span></p>
+<div><h2>事件的应用</h2>
+	<p><button id="btn-0" onclick = "test()">换链接和logo</button></span></p>
+	<p><button id="btn-1" onclick = "orign()">还原</button></p><hr />
+</div>
+
+<div><h2>句柄的应用</h2>
+<p><button id="btn-3">通过句柄改变</button></p>
+<p><button id="btn-4">通过句柄还原</button></p>
+<p><button id="btn-2">句柄弹窗</button></p>
+<a id="aid-1" href="http://www.baidu.com">跳到百度</a>
+</div>
+
+
+<script>
+
+	function mysum(){
+		var i = 25;
+		var j = 10;
+		document.getElementById("sum").innerHTML=i+j;		
+	}
+	function cha(){
+		var i = 25
+		var j = 10
+		document.getElementById("cha").innerHTML=i-j;		
+	}
+	function ji(){
+		var i = 25
+		var j = 10
+		document.getElementById("ji").innerHTML=i*j;		
+	}
+	function shang(){
+		var i = 25
+		var j = 10
+		document.getElementById("shang").innerHTML=i/j;		
+	}
+	function yu(){
+		var i = 25
+		var j = 10
+		document.getElementById("yu").innerHTML=i%j;		
+	}
+
+
+	document.getElementById("btn-3").addEventListener("click",test);
+	var btn4=document.getElementById("btn-4");
+	btn4.addEventListener("click",orign);
+	function test(event){
+		document.getElementById("aid").href="http://www.baidu.com";
+		document.getElementById("imgid").src="http://www.baidu.com/img/bdlogo.png";
+		document.getElementById("pid").style.background="blue";
+	}
+	function orign(event){
+		document.getElementById("aid").href="http://www.jikexueyuan.com";
+		document.getElementById("imgid").src="http://s1.jikexueyuan.com/common/images/logo_c8caff4.png";
+		document.getElementById("pid").style.background="red";
+	}
+
+
+	var btn2=document.getElementById("btn-2");
+	if (btn2.addEventListener) {
+		btn2.addEventListener("click",hello);//2级事件处理
+	}else if(btn2.attachEvent){
+		btn2.attachEvent("onclick",hello);	//IE事件处理
+	}else{
+		btn2.onclick=hello;//0级事件处理  会覆盖
+	}
+	//document.getElementById("btn-2").addEventListener("click",hello);
+	//document.getElementById("btn-2").removeEventListener("click",hello);//移除句柄
+	function hello(event){
+		alert(event.type);	
+		alert(event.target);
+		alert("hello, 刚才我们看到了事件的类型和目标元素。");
+	}
+
+	document.getElementById("aid-1").addEventListener("click",aa);
+	function aa(event) {
+		event.stopPropagation();//阻止事件冒泡（向父元素传递）不可以给按钮这个方法
+		//event.preventDefault();//阻止默认行为，同上
+	}
+
+
+
+</script>
+
+
+</body>
+</html>

@@ -3,18 +3,18 @@
 #python version 3.3.2  
  from tkinter import * 
  '''
-    �ж�
-    ����С��
+    判断
+    两个小球
     {
-        Բ�ģ�A(x1,y1)  �뾶��r  X���ٶȣ�Vax  Y���ٶȣ�Vay
-        Բ�ģ�B(x2,y2)  �뾶��R  X���ٶȣ�Vbx  Y���ٶȣ�Vby
+        圆心：A(x1,y1)  半径：r  X轴速度：Vax  Y轴速度：Vay
+        圆心：B(x2,y2)  半径：R  X轴速度：Vbx  Y轴速度：Vby
     }
-    ��ײ�������ǣ�
-    1.����С���Բ�ľ��벻������С��뾶֮��(r+R)������
+    碰撞的条件是：
+    1.两个小球的圆心距离不大于两小球半径之和(r+R)，即：
     {
         (x2 - x1)^2 + (y2 - y1)^2 <= (r + R)^2
     }
-    2.С����ײ����С������Ƚ���������
+    2.小球碰撞后，两小球的数度交换，即：
     {
         tempVax = Vax
         tempVay = Vay
@@ -22,7 +22,7 @@
         Vay = Vby
         Vbx = tempVax
         Vby = tempVay
-        ��
+        或：
         Vax = Vax + Vbx
         Vbx = Vax - Vbx
         Vax = Vax - Vbx
@@ -30,21 +30,21 @@
         Vby = Vay - Vby
         Vay = Vay - Vby
     } 
-     ��Ϸ����
-    ��С���ڻ������ƶ�������֮��������ײ����ȻС����������Ҷ��������ײ
-    ��ײ��С���ı䷽�򷵻�
-    ����������α������ڵ���С����ƶ��ٶȣ��α�ķ�Χ��[-100, 100]
+     游戏规则：
+    五小球在画布中移动，他们之间会产生碰撞，当然小球和上下左右都会产生碰撞
+    碰撞后，小球会改变方向返回
+    而最下面的游标则用于调节小球的移动速度，游标的范围是[-100, 100]
 
-    ȱ�ݻ�BUG��
-    1.���޸��α����ݴӶ��ı�С���ƶ��ٶȵ�ʱ��С���ƶ��ľ���ò�����ʱ�ĸ���
-    ����С����ܻ����뻭��
-    2.С�����˶��Ĺ����У���ʱ��Ҳ�п������뻭�� 
-     �ܽ᣺
-    ��������Ϸ������һ�����ڵ��°�ʱ�䡣����������в�����ȥѧϰ�˸��е���ѧ֪ʶ��
-    ����֪ʶ���ܶණ�������ò���ˣ������ܿ���ѧ�������ˡ�
-    ��Ϸ��ʵ�ܶ������ѧ���⡣
+    缺陷或BUG：
+    1.在修改游标数据从而改变小球移动速度的时候，小球移动的距离得不到及时的更新
+    导致小球可能会逃离画布
+    2.小球在运动的过程中，有时候也有可能逃离画布 
+     总结：
+    完成这个游戏，花了一个星期的下班时间。在这个过程中不仅回去学习了高中的数学知识，
+    物理知识，很多东西都忘得差不多了，不过很快又学返回来了。
+    游戏其实很多就是数学问题。
 
-    ��Ϸ�л�����ȱ�ݻ�BUG��ϣ��־ͬ�����߿��Թ�ͬ���ơ�
+    游戏中还存在缺陷或BUG，希望志同道合者可以共同完善。
 ''' 
  __author__ = {'author' : 'Hongten',
               'Email' : 'hongtenzone@foxmail.com',
@@ -53,32 +53,32 @@
               'Version' : '1.0'} 
  class Pong(Frame):
     def createWidgets(self):
-        ## ����
+        ## 画布
         self.draw = Canvas(self, width="5i", height="5i", bg='white') 
-         ## �α�(����С���ƶ��ٶȣ���Χ��[-100, 100])
+         ## 游标(控制小球移动速度，范围：[-100, 100])
         self.speed = Scale(self, orient=HORIZONTAL, label="ball speed",
                            from_=-100, to=100) 
          self.speed.pack(side=BOTTOM, fill=X) 
-         #С����ײǽ�ڵķ�Χ
+         #小球碰撞墙壁的范围
         self.scaling_right = 4.8
         self.scaling_left = 0.2
-        #С��ֱ��
+        #小球直径
         self.ball_d = 0.4
-        #�α����
+        #游标度数
         self.scale_value = self.speed.get()
-        #������
+        #放缩率
         self.scaling = 100.0 
-         #���С������
+         #存放小球数组
         self.balls = []
-        #���С��x��������
+        #存放小球x坐标数组
         self.ball_x = []
-        #���С��y��������
+        #存放小球y坐标数组
         self.ball_y = []
-        #���С��x�᷽���ٶ�����
+        #存放小球x轴方向速度数组
         self.ball_v_x = []
-        #���С��y�᷽���ٶ�����
+        #存放小球y轴方向速度数组
         self.ball_v_y = [] 
-         # ���С��
+         # 五个小球
         self.ball = self.draw.create_oval("0.10i", "0.10i", "0.50i", "0.50i",
                                           fill="red")
         self.second_ball = self.draw.create_oval("0.70i", "0.70i", "1.10i", "1.10i",
@@ -89,17 +89,17 @@
                                                  fill='green')
         self.five_ball = self.draw.create_oval("3.0i", "3.0i", "3.40i", "3.40i",
                                                  fill='gray') 
-         #�����С���������
+         #把五个小球放入数组
         self.balls.append(self.ball)
         self.balls.append(self.second_ball)
         self.balls.append(self.three_ball)
         self.balls.append(self.four_ball)
         self.balls.append(self.five_ball) 
-         #��һ��С�򣬼�self.ball��Բ������(self.x, self.y),��������˷���,Ŀ����Ϊ��
-        #��С���ƶ��Ĺ����и�������
+         #第一个小球，即self.ball的圆心坐标(self.x, self.y),这里进行了放缩,目的是为了
+        #在小球移动的过程中更加流畅
         self.x = 0.3        
         self.y = 0.3
-        #��һ��С����ٶȷ���
+        #第一个小球的速度方向
         self.velocity_x = -0.2
         self.velocity_y = 0.5 
          self.second_ball_x = 0.9
@@ -119,13 +119,13 @@
         self.five_ball_v_x = 0.3
         self.five_ball_v_y = 0.5 
          
-        #����С�������
+        #更新小球的坐标
         self.update_ball_x_y()
         self.draw.pack(side=LEFT) 
      def update_ball_x_y(self, *args):
-        '''����С������꣬���Ѹ���С���Բ��������Ϣ�Լ��ٶ���Ϣ��ŵ������У�
-           �����ں���ѭ��������ʱ��ʹ�á�'''
-        #��һ��С����Ϣ
+        '''更新小球的坐标，即把各个小球的圆心坐标信息以及速度信息存放到数组中，
+           便于在后面循环遍历的时候使用。'''
+        #第一个小球信息
         self.ball_x.append(self.x)
         self.ball_y.append(self.y)
         self.ball_v_x.append(self.velocity_x)
@@ -148,10 +148,10 @@
         self.ball_v_y.append(self.five_ball_v_y)
 
     def update_ball_velocity(self, index, *args):
-        '''���¸���С���ٶ���Ϣ����С����ײ�����ܺ������С����Ҫ���µ��ٶ���Ϣ'''
-        #�α�ֵ
+        '''更新各个小球速度信息，即小球碰撞到四周和另外的小球索要更新的速度信息'''
+        #游标值
         self.scale_value = self.speed.get()
-        #��ײǽ��
+        #碰撞墙壁
         if (self.ball_x[index] > self.scaling_right) or (self.ball_x[index] < self.scaling_left):
             self.ball_v_x[index] = -1.0 * self.ball_v_x[index]
         if (self.ball_y[index] > self.scaling_right) or (self.ball_y[index] < self.scaling_left):
@@ -164,9 +164,9 @@
             print(round((self.ball_x[index] - self.ball_x[n])**2 + (self.ball_y[index] - self.ball_y[n])**2, 2) <= round(self.ball_d**2, 2))
         '''
         for n in range(len(self.balls)):
-            #С����ײ����������(x2 - x1)^2 + (y2 - y1)^2 <= (r + R)^2
+            #小球碰撞条件，即：(x2 - x1)^2 + (y2 - y1)^2 <= (r + R)^2
             if (round((self.ball_x[index] - self.ball_x[n])**2 + (self.ball_y[index] - self.ball_y[n])**2, 2) <= round(self.ball_d**2, 2)):
-                #��С���ٶȽ���
+                #两小球速度交换
                 temp_vx = self.ball_v_x[index]
                 temp_vy = self.ball_v_y[index]
                 self.ball_v_x[index] = self.ball_v_x[n]
@@ -179,7 +179,7 @@
         #WRONG:
         for n in range(len(self.balls)):            
             if (((self.ball_x[index] - self.ball_x[n])**2 + (self.ball_y[index] - self.ball_y[n])**2) <= self.ball_d**2):
-                #��С���ٶȽ���
+                #两小球速度交换
                 self.ball_v_x[index] = self.ball_v_x[index] + self.ball_v_x[n]
                 self.ball_v_x[n] = self.ball_v_x[0] - self.ball_v_x[n]
                 self.ball_v_x[index] = self.ball_v_x[index] - self.ball_v_x[n]
@@ -190,22 +190,22 @@
         '''
 
     def get_ball_deltax(self, index, *args):
-        '''��ȡС��X�������ƶ����벢�Ҹ���С���Բ��X���꣬����X�������ƶ�����'''
+        '''获取小球X轴坐标移动距离并且更新小球的圆心X坐标，返回X轴所需移动距离'''
         deltax = (self.ball_v_x[index] * self.scale_value / self.scaling)
         self.ball_x[index] = self.ball_x[index] + deltax
         return deltax 
      def get_ball_deltay(self, index, *args):
-        '''��ȡС��Y�������ƶ����벢�Ҹ���С���Բ��Y���꣬����Y�������ƶ�����'''
+        '''获取小球Y轴坐标移动距离并且更新小球的圆心Y坐标，返回Y轴所需移动距离'''
         deltay = (self.ball_v_y[index] * self.scale_value / self.scaling)
         self.ball_y[index] = self.ball_y[index] + deltay
         return deltay
 
     def moveBall(self, *args):
-        '''�ƶ���һ��С�򣬱��Ϊ��0,���Ǹ������飺self.ballsȷ���ġ�'''
+        '''移动第一个小球，编号为：0,这是根据数组：self.balls确定的。'''
         self.update_ball_velocity(0)       
         deltax = self.get_ball_deltax(0)
         deltay = self.get_ball_deltay(0)
-        #С���ƶ�
+        #小球移动
         self.draw.move(self.ball,  "%ri" % deltax, "%ri" % deltay)
         self.after(10, self.moveBall) 
      def move_second_ball(self, *args):
@@ -235,7 +235,7 @@
         self.after(10, self.move_five_ball) 
              
     def __init__(self, master=None):
-        '''��ʼ������'''
+        '''初始化函数'''
         Frame.__init__(self, master)
         Pack.config(self)
         self.createWidgets()

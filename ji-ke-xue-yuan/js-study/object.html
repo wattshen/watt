@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="Generator" content="">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title></title>
+</head>
+<body onload="startTime()">
+  <div id='timetxt'></div>
+<script>
+	function startTime(){
+		var day = new Date();
+		var h = day.getHours();
+		var m = day.getMinutes();
+		var s = day.getSeconds();
+		m = checkTime(m);
+		s = checkTime(s);
+		document.getElementById("timetxt").innerHTML=h+":"+m+":"+s;
+		t=setTimeout(function(){startTime();},1000);
+	}
+	function checkTime(i) {
+		if (i<10) {
+			i="0"+i;
+		}
+		return i;
+	}
+</script>
+
+
+
+
+
+</body>
+</html>
