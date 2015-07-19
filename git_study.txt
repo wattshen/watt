@@ -1,0 +1,57 @@
+git config --global user.name 用户名　　　（配置用户名）
+git config --global user.email 邮箱　　　（配置用户邮箱）
+
+ssh -T git@github.com 验证远程连接情况
+
+mkdir watt　　创建本地库目录
+cd watt　　　　进入本地库目录
+git init　　初始化仓库
+vi 123.txt　　新建文件
+git add 123.txt　　添加到暂存库（待提交到本地库）
+git commit　　　　提交到本地库
+vi 123.txt　　　　修改文件
+vi 123.txt　　　　再次修改文件
+git add 123.txt　　添加到待提交（到本地库）（可以是已存在的目录或文件名，多个文件时以空格分隔）
+git add *　　　　　添加当前文件夹下所有文件（不包含子文件夹内容）
+git add -A        stages all
+git add .          stages new and modified, without deleted
+git add -u         stages modified and deleted, without new
+git diff　　　　　查询最新版本与本地库的差异
+git status　　　　查询版本信息
+git commit -m "date"　　提交到本地库，并添加说明信息
+dit diff
+git status　　
+vi 12.txt
+rm 12.txt  　　　　　　　删除文件
+git checkout 12.txt　　　由暂存库（优先）或版本库恢复文件
+git rm 12.txt　　　　　　由版本库删除文件
+git log　　　　　查看日志
+git merge
+
+ssh-keygen -t rsa -C "youremail@example.com"　　　创建ＳＳＨ　ＫＥＹ密钥对
+
+
+
+git remote add origin git@github.com:your-github-name/your-local-name.git
+git push -u origin master　第一次时，使用这个将本地库推送到远程服务器
+git push origin master　　　除第一次外，都用这个将本地库推送到远程服务器
+
+
+
+git clone git@github.com:源在github的名称/源项目名称.git（冒号到这里为源的路径；此后可以加空格和本地要存的目录路径）
+
+
+
+Git鼓励大量使用分支：
+
+查看分支：git branch
+
+创建分支：git branch <name>
+
+切换分支：git checkout <name>
+
+创建+切换分支：git checkout -b <name>
+
+合并某分支到当前分支：git merge <name>
+
+删除分支：git branch -d <name>
