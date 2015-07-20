@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env python
 #coding: utf-8 
 #Author: Wattshen
@@ -7,6 +8,8 @@
 #Content:
 
 
+=======
+>>>>>>> master
 def searchs(seq, number, low = 0, up = None):
 	if up is None: up = len(seq) -1
 	if low == up:

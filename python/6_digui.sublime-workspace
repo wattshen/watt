@@ -1,0 +1,283 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 60.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package→安装插件"
+			],
+			[
+				"Package Control: r",
+				"Package Control: Remove Package→删除插件"
+			],
+			[
+				"Package Control: rem",
+				"Package Control: Remove Package→删除插件"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package→删除插件"
+			],
+			[
+				"Package Control:in",
+				"Package Control: Install Package→安装插件"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package→删除插件"
+			],
+			[
+				"in",
+				"Package Control: Install Package→安装插件"
+			],
+			[
+				"i",
+				"Package Control: Install Package→安装插件"
+			]
+		],
+		"width": 523.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+			"ctags -R -f .tags --languages=C --langmap=python:+.ccs",
+			"ctags -R -f .tags --languages=C --langmap=c:+.ccs",
+			"f5"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/G/watt/python/fibs.py",
+		"/G/watt/python/for.py",
+		"/G/watt/python/game1.py",
+		"/G/watt/python/d_url.py",
+		"/G/watt/python/caishuzhi.py",
+		"/G/watt/python/ch_2.py",
+		"/G/watt/python/game2.py",
+		"/G/watt/python/game3.py",
+		"/G/watt/python/gm2.py",
+		"/G/watt/python/gui.py",
+		"/G/watt/python/hello.py",
+		"/G/watt/python/gm.py",
+		"/C/Users/Administrator/Desktop/ji-ke-xue-yuan/re.html",
+		"/C/Users/Administrator/Desktop/ji-ke-xue-yuan/Bytagname.html",
+		"/C/Users/Administrator/Desktop/ji-ke-xue-yuan/div.html",
+		"/C/Users/Administrator/Desktop/ji-ke-xue-yuan/单例.js",
+		"/C/Users/Administrator/Desktop/ji-ke-xue-yuan/app.js",
+		"/C/Users/Administrator/Desktop/ji-ke-xue-yuan/jquery-1.11.3.min.js",
+		"/C/Users/Administrator/Desktop/ji-ke-xue-yuan/jquery-2.1.4.min.js",
+		"/C/Users/Administrator/Desktop/ji-ke-xue-yuan/ji-ke-xue-yuan.txt",
+		"/C/Users/Administrator/Desktop/ji-ke-xue-yuan/danli.html",
+		"/C/Users/Administrator/Desktop/ji-ke-xue-yuan/object.html",
+		"/C/Users/Administrator/Desktop/ji-ke-xue-yuan/hijquery.html",
+		"/G/watt/python/9_mogic.py",
+		"/G/watt/python/9_class2.py",
+		"/G/watt/python/8-queens.py",
+		"/G/watt/python/8queen.py",
+		"/G/watt/python/8_except.py",
+		"/G/watt/python/8_try.py",
+		"/G/watt/python/6_digui.py",
+		"/C/Users/Administrator/Desktop/ji-ke-xue-yuan/test.py",
+		"/D/pf/Sublime Text 3/Data/Packages/ConvertToUTF8/Default (Windows).sublime-keymap",
+		"/D/pf/Sublime Text 3/Data/Packages/ConvertToUTF8/ConvertToUTF8.sublime-settings",
+		"/D/pf/Sublime Text 3/Data/Packages/ConvertToUTF8/Main.sublime-menu",
+		"/D/pf/Sublime Text 3/Data/Packages/Theme - Soda/Soda Dark.sublime-theme",
+		"/D/pf/Sublime Text 3/Data/Packages/Theme - Soda/Soda Dark 3.sublime-theme",
+		"/D/pf/Sublime Text 3/Data/Packages/User/Python.sublime-settings",
+		"/D/pf/Sublime Text 3/Data/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/Administrator/Desktop/ji-ke-xue-yuan/test.pyc",
+		"/D/pf/Sublime Text 3/Data/Packages/Emmet/Emmet.sublime-settings",
+		"/D/pf/Sublime Text 3/Data/Packages/Default/Preferences.sublime-settings",
+		"/D/pf/Sublime Text 3/Data/Packages/SideBarEnhancements/Side Bar.sublime-settings",
+		"/D/pf/Sublime Text 3/Data/Packages/User/SublimeREPL.sublime-settings",
+		"/C/Users/Administrator/Desktop/ji-ke-xue-yuan/test.php",
+		"/D/pf/Sublime Text 3/Data/Packages/User/Default (Windows).sublime-keymap",
+		"/D/pf/Sublime Text 3/Data/Packages/SublimeREPL/config/Python/Default.sublime-commands",
+		"/D/pf/Sublime Text 3/Data/Packages/SublimeREPL/SublimeREPL.sublime-settings",
+		"/D/pf/Sublime Text 3/Data/Packages/SublimeREPL/config/Python/Main.sublime-menu",
+		"/D/pf/Sublime Text 3/Data/Packages/GitGutter/Default (Windows).sublime-keymap"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"lineHighl",
+			"highlight",
+			"hightlight",
+			"ctrl+alt+c",
+			"searchs",
+			"seq",
+			"range",
+			"seq",
+			"<b(.)*?",
+			"</h(\\s)",
+			"<h(\\d)",
+			"seq",
+			"ti(.*)pt",
+			"<h6>(\\s)*?</h6>",
+			"<h6>(\\s)*</h6>",
+			"<h6>{\\s}</h6>",
+			"^s",
+			"^我",
+			"^High",
+			"h6",
+			"h1",
+			"<h1",
+			"^<h1",
+			"ctrl+1",
+			"f5",
+			"ctrl+2",
+			"ctrl+1",
+			"ctrl+B",
+			"ctrl+shift+B",
+			"ctrl+B"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"<h4>$1</h4>"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "6_digui.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": false,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\Users\\Administrator\\Desktop\\ji-ke-xue-yuan\\app.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 178.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

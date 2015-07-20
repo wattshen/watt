@@ -1,0 +1,8 @@
+﻿我领取了一个极客学院的F码:150422102303560 在线学习400＋IT职业课程，注册并激活可以获取VIP会员，戳这里立即注册：http://www.jikexueyuan.com/f (注册成功后 —进入「我的帐户」—「我的F码」— 输入F码激活即可）
+
+
+我领取了一个极客学院的F码:150422803072309 在线学习400＋IT职业课程，注册并激活可以获取VIP会员，戳这里立即注册：http://www.jikexueyuan.com/f (注册成功后 —进入「我的帐户」—「我的F码」— 输入F码激活即可）
+
+
+scrapy.org
+安装python库受阻止时，请到www.lfd.uci.edu/~gohlke/pythonlibs/ 去找到对应的.whl文件，下载后将扩展名改为.zip解压后放到python安装目录的lib目录下即可。

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env python
 #coding: utf-8 
 #Author: Wattshen
@@ -7,6 +8,8 @@
 #Content:
 
 
+=======
+>>>>>>> master
 class My_e(Exception):
 	print 'this is my frist Exception'
 while True:

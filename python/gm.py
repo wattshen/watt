@@ -6,7 +6,7 @@
 #Filename: 
 #Content:
 
-#½«'Peo sp20070701.mp3' ¸ÄÃûÎª 'sp20070701_Peo.mp3'
+#å°†'Peo sp20070701.mp3' æ”¹åä¸º 'sp20070701_Peo.mp3'
 
 import os
 import sys

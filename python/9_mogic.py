@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env python
 #coding: utf-8 
 #Author: Wattshen
@@ -6,6 +7,8 @@
 #Filename: 
 #Content:
 
+=======
+>>>>>>> master
 class Foobar:
 	def __init__(self):
 		self.somevar = 42

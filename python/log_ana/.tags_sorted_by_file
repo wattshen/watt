@@ -1,0 +1,106 @@
+Content	main_1.py	/^Content = {$/;"	v
+f	main_1.py	/^f = open(r'G:\\watt\\python\\log_ana\\20150707.csv','r+')$/;"	v
+he_bing	main_1.py	/^def he_bing(Content, f):$/;"	f
+keys	main_1.py	/^keys = ["SESSION_ID","F_DATE","F_TIME","F_MOBILE","F_CITY","F_BRAND","F_KEYWORD","SYSTEM_ID","CATEGORY_ID","F_ID","F_USER_AGENT","F_TOTAL","F_OFFSET","F_URL","F_TITLE","F_DESC","F_BACK_KEYWORD"]$/;"	v
+process	main_1.py	/^def process(line):$/;"	f
+re	main_1.py	/^import re$/;"	i
+sys	main_1.py	/^import sys$/;"	i
+Content	main_2.py	/^Content = {$/;"	v
+Content_a	main_2.py	/^Content_a = dict(keys_a)$/;"	v
+Content_b	main_2.py	/^Content_b = dict(a= 1,b=2)$/;"	v
+Content_c	main_2.py	/^Content_c = {}.fromkeys(keys)$/;"	v
+f	main_2.py	/^f = open(r'G:\\watt\\python\\log_ana\\20150707.csv','r+')$/;"	v
+he_bing	main_2.py	/^def he_bing(dict_name, File_name):$/;"	f
+keys	main_2.py	/^keys = ["SESSION_ID","F_DATE","F_TIME","F_MOBILE","F_CITY","F_BRAND","F_KEYWORD","SYSTEM_ID","CATEGORY_ID","F_ID","F_USER_AGENT","F_TOTAL","F_OFFSET","F_URL","F_TITLE","F_DESC","F_BACK_KEYWORD"]$/;"	v
+keys_a	main_2.py	/^keys_a = [("name","tom"),("age",35)]$/;"	v
+re	main_2.py	/^import re$/;"	i
+split_line	main_2.py	/^def split_line(line):$/;"	f
+sys	main_2.py	/^import sys$/;"	i
+content	main_3.py	/^content = {$/;"	v
+content_a	main_3.py	/^content_a = dict(keys_a)$/;"	v
+content_b	main_3.py	/^content_b = dict(a= 1,b=2)$/;"	v
+content_c	main_3.py	/^content_c = {}.fromkeys(keys)$/;"	v
+content_he	main_3.py	/^content_he = split_line(f)$/;"	v
+copy	main_3.py	/^import copy$/;"	i
+datetime	main_3.py	/^import datetime$/;"	i
+end_time	main_3.py	/^end_time = datetime.datetime.now()$/;"	v
+f	main_3.py	/^f = open(r'G:\\watt\\python\\log_ana\\20150707.csv','r+')$/;"	v
+keys	main_3.py	/^keys = ["SESSION_ID","F_DATE","F_TIME","F_MOBILE","F_CITY","F_BRAND","F_KEYWORD","SYSTEM_ID","CATEGORY_ID","F_ID","F_USER_AGENT","F_TOTAL","F_OFFSET","F_URL","F_TITLE","F_DESC","F_BACK_KEYWORD"]$/;"	v
+keys_a	main_3.py	/^keys_a = [("name","tom"),("age",35)]$/;"	v
+re	main_3.py	/^import re$/;"	i
+same_sid_click	main_3.py	/^def same_sid_click(dict_name):#传入的字典结构：dict_name{int:{"key":"value"}}$/;"	f
+save_file	main_3.py	/^def save_file(dict_name):$/;"	f
+save_file	main_3.py	/^save_file = save_file(content_he)$/;"	v
+split_line	main_3.py	/^def split_line(file):$/;"	f
+start_time	main_3.py	/^start_time = datetime.datetime.now()$/;"	v
+sys	main_3.py	/^import sys$/;"	i
+content	main_4.py	/^content = {$/;"	v
+content_a	main_4.py	/^content_a = dict(keys_a)$/;"	v
+content_b	main_4.py	/^content_b = dict(a= 1,b=2)$/;"	v
+content_c	main_4.py	/^content_c = {}.fromkeys(keys)$/;"	v
+content_he	main_4.py	/^content_he = split_line(f)$/;"	v
+copy	main_4.py	/^import copy$/;"	i
+datetime	main_4.py	/^import datetime$/;"	i
+end_time	main_4.py	/^end_time = datetime.datetime.now()$/;"	v
+f	main_4.py	/^f = open(r'G:\\watt\\python\\log_ana\\20150707.csv','r+')$/;"	v
+keys	main_4.py	/^keys = ["SESSION_ID","F_DATE","F_TIME","F_MOBILE","F_CITY","F_BRAND","F_KEYWORD","SYSTEM_ID","CATEGORY_ID","F_ID","F_USER_AGENT","F_TOTAL","F_OFFSET","F_URL","F_TITLE","F_DESC","F_BACK_KEYWORD"]$/;"	v
+keys_a	main_4.py	/^keys_a = [("name","tom"),("age",35)]$/;"	v
+re	main_4.py	/^import re$/;"	i
+same_sid_click	main_4.py	/^def same_sid_click(dict_name):#传入的字典结构：dict_name{int:{"key":"value"}}$/;"	f
+save_file	main_4.py	/^def save_file(dict_name):$/;"	f
+save_file	main_4.py	/^save_file = save_file(content_he)$/;"	v
+split_line	main_4.py	/^def split_line(file):$/;"	f
+start_time	main_4.py	/^start_time = datetime.datetime.now()$/;"	v
+sys	main_4.py	/^import sys$/;"	i
+content	main_5.py	/^content = {$/;"	v
+content_a	main_5.py	/^content_a = dict(keys_a)$/;"	v
+content_b	main_5.py	/^content_b = dict(a= 1,b=2)$/;"	v
+content_c	main_5.py	/^content_c = {}.fromkeys(keys)$/;"	v
+content_he	main_5.py	/^content_he = split_line(f)$/;"	v
+copy	main_5.py	/^import copy$/;"	i
+datetime	main_5.py	/^import datetime$/;"	i
+end_time	main_5.py	/^end_time = datetime.datetime.now()$/;"	v
+f	main_5.py	/^f = open(r'G:\\watt\\python\\log_ana\\20150707.csv','r+')$/;"	v
+keys	main_5.py	/^keys = ["SESSION_ID","F_DATE","F_TIME","F_MOBILE","F_CITY","F_BRAND","F_KEYWORD","SYSTEM_ID","CATEGORY_ID","F_ID","F_USER_AGENT","F_TOTAL","F_OFFSET","F_URL","F_TITLE","F_DESC","F_BACK_KEYWORD"]$/;"	v
+keys_a	main_5.py	/^keys_a = [("name","tom"),("age",35)]$/;"	v
+re	main_5.py	/^import re$/;"	i
+same_sid_click	main_5.py	/^def same_sid_click(dict_name):#传入的字典结构：dict_name{int:{"key":"value"}}$/;"	f
+save_file	main_5.py	/^def save_file(dict_name):$/;"	f
+save_file	main_5.py	/^save_file = save_file(content_he)$/;"	v
+split_line	main_5.py	/^def split_line(file):$/;"	f
+start_time	main_5.py	/^start_time = datetime.datetime.now()$/;"	v
+sys	main_5.py	/^import sys$/;"	i
+content	main_6.py	/^content = {$/;"	v
+content_a	main_6.py	/^content_a = dict(keys_a)$/;"	v
+content_b	main_6.py	/^content_b = dict(a= 1,b=2)$/;"	v
+content_c	main_6.py	/^content_c = {}.fromkeys(keys)$/;"	v
+content_he	main_6.py	/^content_he = split_line(f)$/;"	v
+copy	main_6.py	/^import copy$/;"	i
+datetime	main_6.py	/^import datetime$/;"	i
+end_time	main_6.py	/^end_time = datetime.datetime.now()$/;"	v
+f	main_6.py	/^f = open(r'G:\\watt\\python\\log_ana\\20150707.csv','r+')$/;"	v
+keys	main_6.py	/^keys = ["SESSION_ID","F_DATE","F_TIME","F_MOBILE","F_CITY","F_BRAND","F_KEYWORD","SYSTEM_ID","CATEGORY_ID","F_ID","F_USER_AGENT","F_TOTAL","F_OFFSET","F_URL","F_TITLE","F_DESC","F_BACK_KEYWORD"]$/;"	v
+keys_a	main_6.py	/^keys_a = [("name","tom"),("age",35)]$/;"	v
+re	main_6.py	/^import re$/;"	i
+same_sid_click	main_6.py	/^def same_sid_click(dict_name):#传入的字典结构：dict_name{int:{"key":"value"}}$/;"	f
+save_file	main_6.py	/^def save_file(dict_name):$/;"	f
+save_file	main_6.py	/^save_file = save_file(content_he)$/;"	v
+split_line	main_6.py	/^def split_line(file):$/;"	f
+start_time	main_6.py	/^start_time = datetime.datetime.now()$/;"	v
+sys	main_6.py	/^import sys$/;"	i
+copy	new.py	/^import copy$/;"	i
+datetime	new.py	/^import datetime$/;"	i
+f	new.py	/^f = open(r'G:\\watt\\python\\log_ana\\20150707.csv','r+')$/;"	v
+re	new.py	/^import re$/;"	i
+sl	new.py	/^sl = split_line(f)/;"	v
+sys	new.py	/^import sys$/;"	i
+Content	source.py	/^	Content = {Content_k[i]:Content_v}$/;"	v
+Content_k	source.py	/^Content_k = range(17)$/;"	v
+Content_v	source.py	/^Content_v = {}.fromkeys(["SESSION_ID","F_DATE","F_TIME","F_MOBILE","F_CITY","F_BRAND","F_KEYWORD","SYSTEM_ID","CATEGORY_ID","F_ID","F_USER_AGENT","F_TOTAL","F_OFFSET","F_URL","F_TITLE","F_DESC","F_BACK_KEYWORD"])$/;"	v
+i	source.py	/^i = 0$/;"	v
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_PROGRAM_VERSION	5.8	//
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env python
 #coding: utf-8 
 #Author: Wattshen
@@ -5,6 +6,8 @@
 #Filename: 
 #Content:
 
+=======
+>>>>>>> master
 'p(ython|erl)'
 '^(^abc\[\])+.?(0-9)$'
 

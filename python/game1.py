@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env python
 #coding: utf-8 
 #Author: Wattshen
@@ -11,45 +12,52 @@
 #ÓÎÏ·¹æÔò£ºÍæ¼ÒÊäÈëÒ»¸ö0-9µÄÊı×Ö£¬ÏµÍ³¸ù¾İÍæ¼ÒÊäÈëµÄÊı×Ö£¬´òÓ¡³öÊı×ÖµÄĞÅÏ¢
 #        Èç¹ûÍæ¼ÒÊäÈëµÄÊı×Ö·¶Î§²»ÔÚ0-9£¬Ôò»á´òÓ¡³ö"Error!"
 #ÍË³öÓÎÏ·£ºÓÎÏ·»áËæ×Å´òÓ¡ĞÅÏ¢µÄÍê³ÉÌáÊ¾ÍË³öÓÎÏ·
+=======
+#è¿è¡Œæ¸¸æˆåï¼Œç©å®¶é¦–å…ˆè¦è¿›è¡Œè¯­éŸ³çš„é€‰æ‹©ï¼Œ1é€‰æ‹©è‹±è¯­ï¼Œ2é€‰æ‹©æ±‰è¯­ï¼Œå…¶ä»–åˆ™é»˜è®¤é€‰æ‹©è‹±è¯­
+#æ ¹æ®ç©å®¶é€‰æ‹©çš„è¯­éŸ³ï¼Œè¿›å…¥ä¸åŒçš„è¯­éŸ³ç¯å¢ƒ
+#æ¸¸æˆè§„åˆ™ï¼šç©å®¶è¾“å…¥ä¸€ä¸ª0-9çš„æ•°å­—ï¼Œç³»ç»Ÿæ ¹æ®ç©å®¶è¾“å…¥çš„æ•°å­—ï¼Œæ‰“å°å‡ºæ•°å­—çš„ä¿¡æ¯
+#        å¦‚æœç©å®¶è¾“å…¥çš„æ•°å­—èŒƒå›´ä¸åœ¨0-9ï¼Œåˆ™ä¼šæ‰“å°å‡º"Error!"
+#é€€å‡ºæ¸¸æˆï¼šæ¸¸æˆä¼šéšç€æ‰“å°ä¿¡æ¯çš„å®Œæˆæç¤ºé€€å‡ºæ¸¸æˆ
+>>>>>>> master
 language_option = """\
     Language: Choose the language for System[OPTION]
             -1                    Choose English Language
             -2                    Choose Chinese Language
             """
 enter_str = 'please enter an integer:'
-#¿ªÊ¼ÓÎÏ·Ç°µÄËµÃ÷
-en_game_start_str = 'You choose English language!,Now£¬Game Start!'
-cn_game_start_str = 'ÄãÑ¡ÔñµÄÖĞÎÄÄ£Ê½£¡ÏÖÔÚ£¬¿ªÊ¼ÓÎÏ·!'
-#ÓÎÏ·¹æÔò
+#å¼€å§‹æ¸¸æˆå‰çš„è¯´æ˜
+en_game_start_str = 'You choose English language!,Nowï¼ŒGame Start!'
+cn_game_start_str = 'ä½ é€‰æ‹©çš„ä¸­æ–‡æ¨¡å¼ï¼ç°åœ¨ï¼Œå¼€å§‹æ¸¸æˆ!'
+#æ¸¸æˆè§„åˆ™
 en_game_rule_str = 'you should enter a number that from 0 to 9,then the \nSystem will print the information of the number'
-cn_game_rule_str = 'ÄãÊäÈëÒ»¸ö0-9µÄÊı×Ö£¬ÏµÍ³»á´òÓ¡³ö¸ÃÊı×ÖµÄĞÅÏ¢'
-#½áÊøÓÎÏ·
+cn_game_rule_str = 'ä½ è¾“å…¥ä¸€ä¸ª0-9çš„æ•°å­—ï¼Œç³»ç»Ÿä¼šæ‰“å°å‡ºè¯¥æ•°å­—çš„ä¿¡æ¯'
+#ç»“æŸæ¸¸æˆ
 en_game_over_str = 'Game Over!'
-cn_game_over_str = 'ÓÎÏ·½áÊø£¡'
+cn_game_over_str = 'æ¸¸æˆç»“æŸï¼'
 print(language_option)
 number = int(input(enter_str))
 
 def print_info(num):
     if num == 0:
-        print('0 zero Áã')
+        print('0 zero é›¶')
     elif num == 1:
-        print('1 one Ò¼')
+        print('1 one å£¹')
     elif num == 2:
-        print('2 two ·¡')
+        print('2 two è´°')
     elif num == 3:
-        print('3 three Èş')
+        print('3 three å')
     elif num == 4:
-        print('4 four ËÁ')
+        print('4 four è‚†')
     elif num == 5:
-        print('5 five Îé')
+        print('5 five ä¼')
     elif num == 6:
-        print('6 six Â½')
+        print('6 six é™†')
     elif num == 7:
-        print('7 seven Æâ')
+        print('7 seven æŸ’')
     elif num == 8:
-        print('8 eight °Æ')
+        print('8 eight æŒ')
     elif num == 9:
-        print('9 nine ¾Á')
+        print('9 nine ç–')
     else:
         print('Error!')
 
@@ -82,11 +90,11 @@ else:
 
 
 
-#ÔËĞĞÓÎÏ·ºó£¬Íæ¼ÒÊ×ÏÈÒª½øĞĞÓïÒôµÄÑ¡Ôñ£¬1Ñ¡ÔñÓ¢Óï£¬2Ñ¡ÔñººÓï£¬ÆäËûÔòÄ¬ÈÏÑ¡ÔñÓ¢Óï
-#¸ù¾İÍæ¼ÒÑ¡ÔñµÄÓïÒô£¬½øÈë²»Í¬µÄÓïÒô»·¾³
-#ÓÎÏ·¹æÔò£ºÍæ¼ÒÊäÈëÒ»¸ö0-9µÄÊı×Ö£¬ÏµÍ³¸ù¾İÍæ¼ÒÊäÈëµÄÊı×Ö£¬´òÓ¡³öÊı×ÖµÄĞÅÏ¢
-#        Èç¹ûÍæ¼ÒÊäÈëµÄÊı×Ö·¶Î§²»ÔÚ0-9£¬Ôò»á´òÓ¡³ö"Error!"
-#ÍË³öÓÎÏ·£ºÓÎÏ·»áËæ×Å´òÓ¡ĞÅÏ¢µÄÍê³ÉÌáÊ¾ÍË³öÓÎÏ·
+#è¿è¡Œæ¸¸æˆåï¼Œç©å®¶é¦–å…ˆè¦è¿›è¡Œè¯­éŸ³çš„é€‰æ‹©ï¼Œ1é€‰æ‹©è‹±è¯­ï¼Œ2é€‰æ‹©æ±‰è¯­ï¼Œå…¶ä»–åˆ™é»˜è®¤é€‰æ‹©è‹±è¯­
+#æ ¹æ®ç©å®¶é€‰æ‹©çš„è¯­éŸ³ï¼Œè¿›å…¥ä¸åŒçš„è¯­éŸ³ç¯å¢ƒ
+#æ¸¸æˆè§„åˆ™ï¼šç©å®¶è¾“å…¥ä¸€ä¸ª0-9çš„æ•°å­—ï¼Œç³»ç»Ÿæ ¹æ®ç©å®¶è¾“å…¥çš„æ•°å­—ï¼Œæ‰“å°å‡ºæ•°å­—çš„ä¿¡æ¯
+#        å¦‚æœç©å®¶è¾“å…¥çš„æ•°å­—èŒƒå›´ä¸åœ¨0-9ï¼Œåˆ™ä¼šæ‰“å°å‡º"Error!"
+#é€€å‡ºæ¸¸æˆï¼šæ¸¸æˆä¼šéšç€æ‰“å°ä¿¡æ¯çš„å®Œæˆæç¤ºé€€å‡ºæ¸¸æˆ
 language_option = """\
     Language: Choose the language for System[OPTION]
             -1                    Choose English Language
@@ -94,27 +102,27 @@ language_option = """\
             """
 enter_str = 'please enter an integer:'
 
-#¿ªÊ¼ÓÎÏ·Ç°µÄËµÃ÷
-en_game_start_str = 'You choose English language!,Now£¬Game Start!'
-cn_game_start_str = 'ÄãÑ¡ÔñµÄÖĞÎÄÄ£Ê½£¡ÏÖÔÚ£¬¿ªÊ¼ÓÎÏ·!'
+#å¼€å§‹æ¸¸æˆå‰çš„è¯´æ˜
+en_game_start_str = 'You choose English language!,Nowï¼ŒGame Start!'
+cn_game_start_str = 'ä½ é€‰æ‹©çš„ä¸­æ–‡æ¨¡å¼ï¼ç°åœ¨ï¼Œå¼€å§‹æ¸¸æˆ!'
 
-#ÓÎÏ·¹æÔò
+#æ¸¸æˆè§„åˆ™
 en_game_rule_str = 'you should enter a number that from 0 to 9,then the \nSystem will print the information of the number'
-cn_game_rule_str = 'ÄãÊäÈëÒ»¸ö0-9µÄÊı×Ö£¬ÏµÍ³»á´òÓ¡³ö¸ÃÊı×ÖµÄĞÅÏ¢'
+cn_game_rule_str = 'ä½ è¾“å…¥ä¸€ä¸ª0-9çš„æ•°å­—ï¼Œç³»ç»Ÿä¼šæ‰“å°å‡ºè¯¥æ•°å­—çš„ä¿¡æ¯'
 
-#½áÊøÓÎÏ·
+#ç»“æŸæ¸¸æˆ
 en_game_over_str = 'Game Over!'
-cn_game_over_str = 'ÓÎÏ·½áÊø£¡'
+cn_game_over_str = 'æ¸¸æˆç»“æŸï¼'
 print(language_option)
 
-#¶¨ÒåÁĞ±í
+#å®šä¹‰åˆ—è¡¨
 en_list = ['zero','one','two','three','four','five','six','seven','eight','nine']
-cn_list = ['Áã','Ò¼','·¡','Èş','ËÁ','Îé','Â½','Æâ','°Æ','¾Á']
+cn_list = ['é›¶','å£¹','è´°','å','è‚†','ä¼','é™†','æŸ’','æŒ','ç–']
 
-#Ñ­»·±êÖ¾
+#å¾ªç¯æ ‡å¿—
 FLAG = True
 
-#»¹ĞèÒªÍæÂğ?
+#è¿˜éœ€è¦ç©å—?
 en_play_again_str = """\
     #############################################
     Do you want play again?
@@ -123,21 +131,21 @@ en_play_again_str = """\
              """
 cn_play_again_str = """\
     #############################################
-    Äã»¹Òª¼ÌĞøÍæÂğ£¿
-    -1              ¼ÌĞøÍæ
-    -2              ÍË³öÓÎÏ·
+    ä½ è¿˜è¦ç»§ç»­ç©å—ï¼Ÿ
+    -1              ç»§ç»­ç©
+    -2              é€€å‡ºæ¸¸æˆ
              """
 
 number = int(input(enter_str))
 
-#ÓÎÏ·´òÓ¡ĞÅÏ¢
+#æ¸¸æˆæ‰“å°ä¿¡æ¯
 def print_info(num):
     if num in range(0,9):
         print(num,en_list[num],cn_list[num])
     else:
         print('Error!')
 
-#¿ªÊ¼ÓÎÏ·
+#å¼€å§‹æ¸¸æˆ
 def start_game(num):
     if num == 1:
         print(en_game_rule_str)
@@ -148,7 +156,7 @@ def start_game(num):
     n = int(input(enter_str))
     print_info(n)
 
-#Ñ­»·ÍæÓÎÏ·
+#å¾ªç¯ç©æ¸¸æˆ
 def play_again(n):
     if n == 1:
         print(en_play_again_str)
@@ -160,11 +168,11 @@ def play_again(n):
     if again == 1:
         pass
     elif again == 2:
-        #ÕâÀïÊ¹ÓÃµÄÊÇÈ«¾Ö±äÁ¿£¬×¢ÒâÕâÀï²»ÒªĞ´³É£ºglobal FLAG = False
+        #è¿™é‡Œä½¿ç”¨çš„æ˜¯å…¨å±€å˜é‡ï¼Œæ³¨æ„è¿™é‡Œä¸è¦å†™æˆï¼šglobal FLAG = False
         global FLAG
         FLAG = False
         
-#ÓÎÏ·µÄÑ­»·Ìå   
+#æ¸¸æˆçš„å¾ªç¯ä½“   
 while True:
     if FLAG:
         if number == 1:

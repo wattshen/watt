@@ -1,0 +1,77 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+IN	.\line.c	5;"	d	file:
+MAX	.\24dian (2).c	17;"	d	file:
+MAX	.\24dian.c	2;"	d	file:
+MAX	.\test24.c	2;"	d	file:
+MAXLINE	.\zhifusz.c	2;"	d	file:
+OUT	.\line.c	6;"	d	file:
+a	.\24dian (2).c	/^int a[MAX];$/;"	v
+a	.\24dian.c	/^int a[MAX];$/;"	v
+a	.\test24.c	/^int a[MAX];$/;"	v
+b	.\24dian (2).c	/^int b[MAX];$/;"	v
+b	.\24dian.c	/^int b[MAX];$/;"	v
+b	.\test24.c	/^int b[MAX];$/;"	v
+c	.\24dian (2).c	/^int c[MAX];$/;"	v
+c	.\24dian.c	/^int c[MAX];$/;"	v
+c	.\line.c	/^int c,nl,nw,nc,state;$/;"	v
+c	.\test24.c	/^int c[MAX];$/;"	v
+char	.\µπ≈≈ ‰»Î.c	2;"	d	file:
+copy	.\zhifusz.c	/^void copy(char to[], char from[])$/;"	f
+copy	.\µπ≈≈ ‰»Î.c	/^int copy()$/;"	f
+d	.\24dian (2).c	/^int d[MAX];$/;"	v
+d	.\24dian.c	/^int d[MAX];$/;"	v
+d	.\test24.c	/^int d[MAX];$/;"	v
+getline	.\zhifusz.c	/^int getline(char s[], int lim)$/;"	f
+getline	.\µπ≈≈ ‰»Î.c	/^int getline()$/;"	f
+i	.\testi.c	/^int i;$/;"	v
+ia	.\24dian (2).c	/^int ia, ib, ic, id;$/;"	v
+ia	.\24dian.c	/^int ia, ib, ic, id;$/;"	v
+ia	.\test24.c	/^int ia, ib, ic, id;$/;"	v
+ib	.\24dian (2).c	/^int ia, ib, ic, id;$/;"	v
+ib	.\24dian.c	/^int ia, ib, ic, id;$/;"	v
+ib	.\test24.c	/^int ia, ib, ic, id;$/;"	v
+ic	.\24dian (2).c	/^int ia, ib, ic, id;$/;"	v
+ic	.\24dian.c	/^int ia, ib, ic, id;$/;"	v
+ic	.\test24.c	/^int ia, ib, ic, id;$/;"	v
+id	.\24dian (2).c	/^int ia, ib, ic, id;$/;"	v
+id	.\24dian.c	/^int ia, ib, ic, id;$/;"	v
+id	.\test24.c	/^int ia, ib, ic, id;$/;"	v
+main	.\24dian (2).c	/^int main(void){$/;"	f
+main	.\24dian.c	/^int main(void){$/;"	f
+main	.\ctof.c	/^int main(void){$/;"	f
+main	.\ftoc.c	/^int main(void){$/;"	f
+main	.\getputchar.c	/^int main(void){$/;"	f
+main	.\hello.c	/^int main(void){$/;"	f
+main	.\line.c	/^int main(void){$/;"	f
+main	.\test24.c	/^int main(void){$/;"	f
+main	.\testi.c	/^int main(void)$/;"	f
+main	.\two.c	/^int main(void){$/;"	f
+main	.\zhifang.cpp	/^int main(void){$/;"	f
+main	.\zhifushu.c	/^int main(void){  $/;"	f
+main	.\zhifusz.c	/^int main(void)$/;"	f
+main	.\µπ≈≈ ‰»Î.c	/^int main(void)$/;"	f
+nc	.\line.c	/^int c,nl,nw,nc,state;$/;"	v
+nc	.\zhifushu.c	/^double nc;$/;"	v
+ndigtal	.\zhifang.cpp	/^int ndigtal[],nspace;$/;"	v
+nl	.\line.c	/^int c,nl,nw,nc,state;$/;"	v
+nspace	.\zhifang.cpp	/^int ndigtal[],nspace;$/;"	v
+nw	.\line.c	/^int c,nl,nw,nc,state;$/;"	v
+state	.\line.c	/^int c,nl,nw,nc,state;$/;"	v
+u	.\24dian (2).c	/^int x,y,z,u,v;$/;"	v
+u	.\24dian.c	/^int x,y,z,u;$/;"	v
+u	.\test24.c	/^int x,y,z,u;$/;"	v
+v	.\24dian (2).c	/^int x,y,z,u,v;$/;"	v
+x	.\24dian (2).c	/^int x,y,z,u,v;$/;"	v
+x	.\24dian.c	/^int x,y,z,u;$/;"	v
+x	.\test24.c	/^int x,y,z,u;$/;"	v
+y	.\24dian (2).c	/^int x,y,z,u,v;$/;"	v
+y	.\24dian.c	/^int x,y,z,u;$/;"	v
+y	.\test24.c	/^int x,y,z,u;$/;"	v
+z	.\24dian (2).c	/^int x,y,z,u,v;$/;"	v
+z	.\24dian.c	/^int x,y,z,u;$/;"	v
+z	.\test24.c	/^int x,y,z,u;$/;"	v

@@ -1,9 +1,16 @@
 #!/usr/bin/env python
 #coding: utf-8 
+<<<<<<< HEAD
 #Author: Wattshen
 #Email:34665115@qq.com
 #Date:2015年3月27日
 #Filename: ch_2.py
+=======
+#-*-*-  Author: Wattshen       -*-*-
+#-*-*-  Email:34665115@qq.com  -*-*-
+#-*-*-  Filename:ch_2.py  -*-*-
+#-*-*-  Date:2015年3月27日
+>>>>>>> master
 #Content:list & tuple
 
 x = [1,2,3,4,5]

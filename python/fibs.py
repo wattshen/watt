@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env python
 #coding: utf-8 
 #Author: Wattshen
@@ -6,6 +7,8 @@
 #Filename: 
 #Content:
 
+=======
+>>>>>>> master
 # fibs by function(for)
 num = int(raw_input("please input a number, I'll given you a fibs ..."))
 

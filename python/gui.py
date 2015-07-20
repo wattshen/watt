@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env python
 #coding: utf-8 
 #Author: Wattshen
@@ -6,6 +7,11 @@
 #Filename: hello.py
 #Content:
 
+=======
+#! /usr/bin/python
+
+#filename:hello.py
+>>>>>>> master
 
 i = 0
 while i < 50:
