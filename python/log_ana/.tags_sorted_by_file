@@ -1,3 +1,13 @@
+b_w	learn.py	/^b_w = s_width + 6$/;"	v
+init	learn.py	/^def init(data):$/;"	f
+left	learn.py	/^left = (screen_width - s_width)\/\/2$/;"	v
+lookup	learn.py	/^def lookup(data, label, name):$/;"	f
+mynames	learn.py	/^mynames = {}$/;"	v
+s	learn.py	/^s = raw_input("请输入一个句子……")$/;"	v
+s_width	learn.py	/^s_width = len(s)$/;"	v
+screen_width	learn.py	/^screen_width = 80$/;"	v
+store	learn.py	/^def store(data, *full_name):$/;"	f
+users	learn.py	/^users = ('watt','jim','tom')$/;"	v
 Content	main_1.py	/^Content = {$/;"	v
 f	main_1.py	/^f = open(r'G:\\watt\\python\\log_ana\\20150707.csv','r+')$/;"	v
 he_bing	main_1.py	/^def he_bing(Content, f):$/;"	f
@@ -88,16 +98,48 @@ save_file	main_6.py	/^save_file = save_file(content_he)$/;"	v
 split_line	main_6.py	/^def split_line(file):$/;"	f
 start_time	main_6.py	/^start_time = datetime.datetime.now()$/;"	v
 sys	main_6.py	/^import sys$/;"	i
-copy	new.py	/^import copy$/;"	i
-datetime	new.py	/^import datetime$/;"	i
-f	new.py	/^f = open(r'G:\\watt\\python\\log_ana\\20150707.csv','r+')$/;"	v
-re	new.py	/^import re$/;"	i
-sl	new.py	/^sl = split_line(f)/;"	v
-sys	new.py	/^import sys$/;"	i
+copy	main_7.py	/^import copy$/;"	i
+cut	main_7.py	/^def cut(dict_dict, key):$/;"	f
+datetime	main_7.py	/^import datetime$/;"	i
+end_time	main_7.py	/^end_time = datetime.datetime.now()$/;"	v
+f	main_7.py	/^f = open(r'G:\\watt\\python\\log_ana\\20150707.csv','r+')$/;"	v
+n_juhe	main_7.py	/^import n_juhe$/;"	i
+re	main_7.py	/^import re$/;"	i
+split_line	main_7.py	/^def split_line(file):$/;"	f
+start_time	main_7.py	/^start_time = datetime.datetime.now()$/;"	v
+sys	main_7.py	/^import sys$/;"	i
+weidu	main_7.py	/^def weidu(a_list, a_list_name, dict_dict, target_1):$/;"	f
+__metaclass__	n_juhe.py	/^__metaclass__ = type$/;"	v
+copy	n_juhe.py	/^import copy$/;"	i
+cut	n_juhe.py	/^	def cut(self, dict_dict, key):$/;"	m	class:juhe
+datetime	n_juhe.py	/^import datetime$/;"	i
+f	n_juhe.py	/^	f = open(r'G:\\watt\\python\\log_ana\\20150707.csv','r+')$/;"	v	class:juhe
+he	n_juhe.py	/^	def he (self, dict_dict={}, a_list=[], key=''):$/;"	m	class:juhe
+juhe	n_juhe.py	/^class juhe():$/;"	c
+ord_sid	n_juhe.py	/^	def ord_sid (self, b_dict, dict_dict):$/;"	m	class:juhe
+re	n_juhe.py	/^import re$/;"	i
+split_line	n_juhe.py	/^	def split_line(self, file):$/;"	m	class:juhe
+sys	n_juhe.py	/^import sys$/;"	i
+f	n_split.py	/^f = open(r'G:\\watt\\python\\log_ana\\20150707.csv','r+')$/;"	v
+re	n_split.py	/^import re$/;"	i
+split_line	n_split.py	/^def split_line(file):$/;"	f
 Content	source.py	/^	Content = {Content_k[i]:Content_v}$/;"	v
 Content_k	source.py	/^Content_k = range(17)$/;"	v
 Content_v	source.py	/^Content_v = {}.fromkeys(["SESSION_ID","F_DATE","F_TIME","F_MOBILE","F_CITY","F_BRAND","F_KEYWORD","SYSTEM_ID","CATEGORY_ID","F_ID","F_USER_AGENT","F_TOTAL","F_OFFSET","F_URL","F_TITLE","F_DESC","F_BACK_KEYWORD"])$/;"	v
 i	source.py	/^i = 0$/;"	v
+F_DATE	use_nei.py	/^F_DATE = jh.cut(lines, 'F_DATE')$/;"	v
+F_KEYWORD	use_nei.py	/^F_KEYWORD = jh.cut(lines, 'F_KEYWORD')$/;"	v
+F_MOBILE	use_nei.py	/^F_MOBILE = jh.cut(lines, 'F_MOBILE')$/;"	v
+F_TIME	use_nei.py	/^F_TIME = jh.cut(lines, 'F_TIME')$/;"	v
+SESSION_ID	use_nei.py	/^SESSION_ID = jh.cut(lines, 'SESSION_ID')$/;"	v
+datetime	use_nei.py	/^import datetime$/;"	i
+end_time	use_nei.py	/^end_time = datetime.datetime.now()$/;"	v
+f	use_nei.py	/^f = open(r'G:\\watt\\python\\log_ana\\20150707.csv','r+')$/;"	v
+jh	use_nei.py	/^jh = juhe()$/;"	v
+juhe	use_nei.py	/^from n_juhe import juhe$/;"	i
+lines	use_nei.py	/^lines = jh.split_line(f)$/;"	v
+p	use_nei.py	/^p = jh.he(lines, SESSION_ID, 'SESSION_ID')$/;"	v
+start_time	use_nei.py	/^start_time = datetime.datetime.now()$/;"	v
 !_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
 !_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
 !_TAG_PROGRAM_VERSION	5.8	//

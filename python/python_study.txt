@@ -1,0 +1,34 @@
+序列：
+	索引：'hello'[0] 'h'
+	
+	切片：'hello'[0:3:1] 'h','e','l'; 'hello'[-2:-1] 'l'; 'hello'[-2:0] 'l','o';
+	
+	相加：+　两种类型相同的序列可相当，但不改变原序列的值。如须改变可用extend
+	
+	乘法：* 
+	
+	成员资格：in 返回True或False
+	
+	工厂函数：len, max, min,
+
+
+list
+	函数：
+		list()
+	方法：
+		insert　in-place operation插入，也可以用切片来做，但切片非原位置操作
+		append  in-place operation尾部添加单个元素，也可以用切片来做，但切片非原位置操作
+		extend　in-place operation在原列表的尾部添加新的列表，也可以用切片来做，但切片非原位置操作
+		pop  in-place operation删除（默认尾部）元素，并返回该元素的值。
+		remove  in-place operation移除列表中第一个匹配项，无返回值
+		reverse  in-place operation反转列表，不返回值
+		index　返回第一个匹配项的索引
+		count　返回某个元素出现的次数
+		sort  in-place operation排序　可以有三个参数（cmp, reverse, key）
+
+tuple:
+	函数：
+		tuple()
+	列表以[]定义，元组以（）定义
+	空元组（）
+	

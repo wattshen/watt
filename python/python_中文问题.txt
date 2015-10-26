@@ -1,0 +1,281 @@
+TYuenCN
+首页博问闪存新随笔联系订阅 管理
+Unicode和Python的中文处理
+
+Unicode和Python的中文处理
+
+http://blog.csdn.net/tingsking18/archive/2009/03/29/4033645.aspx
+
+　　在Python语言中，Uincode字符串处理一直是一个容易让人迷惑的问题。许多Python爱好者经常因为搞不清Unicode、UTF-8还有其它许许多多的编码之间的区别而大伤脑筋。笔者曾经也是这“伤脑筋一族”的成员，但经过半年多的努力，现在终于初步弄清楚其中的一些关系。现将其整理如下，与各位同仁同享。同时也希望能借这篇短文抛砖引玉，吸引更多真正的高手加入进来，共同完善我们的Python中文环境。
+
+　　本文所提到的各种观点，一部分是查阅资料所得，还有一部分是笔者利用已有各种编码数据用“猜测加验证”法得到。笔者自问才疏学浅，其中怕是藏有不少错误。各位看官中不乏高手，如果有哪一位发现其中哪里有错，万望各位高人不吝赐教。笔者自己丢丑事小，观点错误误了别人事大，因此各位大可不必顾忌笔者的面子问题。
+
+
+第一节　文字编码和Unicode标准
+
+　　要解释Unicode字符串就必须先从什么是Unicode编码开始说起。众所周知，文本显示一直是计算机显示功能必须解决的基本问题。而计算机并不识字，它实际上是把文本看做是一串“图片”，每张“图片”对应一个字符。每个计算机程序在显示文本时，必须借助一个记录这个文字“图片”如何显示的“图片”集合，从中找到每一个字符对应“图片”的数据，并依样画葫芦地把这个字“画”到屏幕上。这个“图片”就被称为“字模”，而记录字模显示数据的集合就被称为“字符集”。为方便程序查找，每个字符的字模数据在字符集中必须是有序排列的，而且每个字符都会被分配一个独一无二的ID，这个ID就是字符的编码。而在计算机进行字符数据处理时，总是用这个编码代表它表示的那个字符。因此，一个字符集就规定了一组计算机能够处理的字符数据。显然，不同国家指定的字符集大小不同，相应的字符编码也不同。
+
+　　在计算机历史上，最为广泛使用的标准化字符集当首推ASCII字符集。它实际上是美国制订的标准，针对北美用户开发。它使用7个二进制位编码，可以表示128个字符。这个字符集最终被ISO组织正式采纳为国际标准，并且大量应用在各种计算机体系上。现如今，所有PC机的BIOS中都内含了ASCII字符集的字模，其深入人心可见一斑。
+
+　　但是，当计算机在各个国家大规模普及时，ASCII编码的局限性就暴露出来了：它的字符空间实在有限，无法容纳更多的字符，可是绝大多数语言需要使用的字符数目都远不止128个。为了能正确处理本国文字，各个国家官方或民间纷纷开始了设计本国文字编码集的工作，并且最终涌现出许许多多针对各个国家文字的字符编码，如针对西欧字符的ISO-8859-1编码，针对简体中文的GB系列编码，还有针对日文的SHIFT-JIS编码等等。同时，为了保证各个新的字符集能够兼容原本的ASCII文本，大多数字符集不约而同地都将ASCII字符作为自己前128个字符，并使其编码与ASCII编码一一对应。
+
+　　这样一来，各国文字的显示问题是解决了，可是又带来一个新的问题：乱码。不同国家、地区使用的字符集通常没有统一的规范进行约束，因此各个字符集编码往往互不兼容。同一个字在两个不同的字符集中编码一般不同；而同一个编码在不同的字符集中对应的字符也不一样。一段用编码A编写的文本在一个只支持编码B的系统上往往会被显示成一堆乱七八糟的字符。更糟糕的是，不同字符集使用的编码长度往往也不相同，那些只能处理单字节编码的程序在遇到双字节甚至是多字节编码的文本时，往往因为不能正确处理而产生了臭名昭著的“半个字”问题。这使得本已经混乱不堪的局面更是乱成了一团粥。
+
+　　为了一劳永逸地解决这些问题，业界许多大公司和组织联合提出了一个标准，这就是Unicode。Unicode实际上是一种新的字符编码体系。它对字符集中的每个字符用两个字节长的ID号进行编码，从而规定出一个可容纳多达65536个字符的编码空间，并且将现今国际上各国编码中的常用字尽数收入罄中。由于在设计编码时有了周全的考虑，Unicode很好地解决了其它字符集在进行数据交流时的乱码和“半个字”问题。同时，Unicode的设计者充分考虑到现今大量字模数据使用的仍是各国制订的各种编码这一现实，提出了“将Unicode作为内部编码”的设计理念。也就是说，字符显示程序依然使用原先的编码和代码，而应用程序的内部逻辑使用的将是Unicode。当要进行文字显示时，程序总是将Unicode编码的字符串转换成原本的编码进行显示。这样，大家就不必为了使用Unicode而重新设计字模数据体系了。同时，为了与各国已经制订的编码相区别，Unicode的设计者将Unicode称为“宽字符编码”（wide characters encodings），而各国制订的编码习惯上被称为“多字节编码”（multi bypes encodings）。时至今日，Unicode体系又引入了四字节的扩展编码，并且逐渐与与UCS-4，也就是ISO10646编码规范合流，希望有朝一日能够用ISO10646体系统一全世界所有的文字编码。
+
+　　Unicode体系甫一出世便被大家寄予厚望，并被迅速接受为ISO认可的国际标准。但是，Unicode在推广过程中却遭到了首先是欧美用户的反对。他们反对的理由非常简单：欧美用户原本使用的编码都是单字节长的，双字节的Unicode处理引擎无法处理原本的单字节数据；而如果要把现有的单字节文本全部转换成Unicode，工作量就太大了。再说，如果所有的单字节编码文本都被转换成双字节的Unicode编码，他们所有的文本数据占用的空间都会变成原来的两倍，而且所有的处理程序都要被重新编写。这个开销他们无法接受。
+
+　　虽然Unicode是国际认可的标准，但是标准化组织不可能不考虑欧美用户这个最大的计算机使用群体的要求。于是在各方磋商之下，一个Unicode的变种版本产生了，这就是UTF-8。UTF-8是一个多字节的编码体系，它的编码规则如下：
+
+　　1、UTF-8编码分为四个区：
+　　　　一区为单字节编码，
+　　　　　　编码格式为：0xxxxxxx；
+　　　　　　对应Unicode：0x0000 - 0x007f
+　　　　二区为双字节编码，
+　　　　　　编码格式为：110xxxxx 10xxxxxx；
+　　　　　　对应Unicode：0x0080 - 0x07ff
+　　　　三区为三字节编码，
+　　　　　　编码格式为：1110xxxx 10xxxxxxx 10xxxxxx
+　　　　　　对应Unicode：0x0800 - 0xffff
+　　　　四区为四字节编码，
+　　　　　　编码格式为：11110xxx 10xxxxxxx 10xxxxxx 10xxxxxx
+　　　　　　对应Unicode：0x00010000 - 0x0001ffff
+　　　　五区为五字节编码，
+　　　　　　编码格式为：111110xx 10xxxxxxx 10xxxxxxx 10xxxxxxx 10xxxxxxx
+　　　　　　对应Unicode：0x00200000 - 0x03ffffff
+　　　　六区为六字节编码，
+　　　　　　编码格式为：111110x 10xxxxxxx 10xxxxxxx 10xxxxxxx 10xxxxxxx 10xxxxxxx
+　　　　　　对应Unicode：0x04000000 - 0x7fffffff
+
+　　　其中，一、二、三区对应Unicode的双字节编码区，而四区则针对Unicode的四字节扩展部分（按照该定义，UTF-8还有五区和六区，但笔者并未在GNU glibc库中发现，不知为何）；
+
+　　2、各个区按照一、二、三、四、五、六顺序排列，其对应位置上的字符与Unicode保持相同；
+
+　　3、不可显示的Unicode字符编码为0字节，换言之，它们没有被收入UTF-8（这是笔者从GNU C库注释中得到的说法，可能与实际情况不符）；
+
+　　按照UTF-8编码规则我们不难发现，其一区的128个编码实际上就是ASCII编码。所以UTF-8的处理引擎可以直接处理ASCII文本。但是，UTF-8对ASCII编码的兼容是以牺牲其它编码为代价的。比如，原本中、日、韩三国文字基本上都是双字节编码，但它们在Unicode编码中的位置对应到UTF-8中的三区，每一个字符编码要三个字节长。换句话说，如果我们把所有现有的中、日、韩三国编码的非ASCII字符文本数据转换成UTF-8编码，则其大小都会变成原来的1.5倍。
+
+　　虽然笔者个人认为UTF-8的编码方式显得有些不够公平，但它毕竟解决了ASCII文本到Unicode世界的过渡问题，所以还是赢得了广泛的认可。典型的例子是XML和Java：XML文本的默认编码就是UTF-8，而Java源代码实际上就可以用UTF-8字符编写（JBuilder的用户应该有印象）。另外还有开源软件世界中大名鼎鼎的GTK 2.0，它使用UTF-8字符作为内部编码。
+
+　　说了这么多，似乎话题有些扯远了，许多Python爱好者可能已经开始着急：“这和Python有什么关系呢？”好的，现在我们就把视线转到Python的世界来。
+
+
+第二节　Python的Unicode编码系统
+
+　　为了正确处理多语言文本，Python在2.0版后引入了Unicode字符串。从那时起，Python语言中的字符串就分为两种：一种是2.0版之前就已经使用很久的传统Python字符串，一种则是新的Unicode字符串。在Python语言中，我们使用unicode()内建函数对一个传统Python字符串进行“解码”，得到一个Unicode字符串，然后又通过Unicode字符串的encode()方法对这个Unicode字符串进行“编码”，将其“编码”成为传统Python字符串以上内容想必每一个Python用户都是烂熟于胸了。但是你可知道，Python的Unicode字符串并不是真正意义上的“Unicode编码的字符串”，而是遵循一种自己特有的规则。这个规则的内容简单得很：
+
+　　1、ASCII字符的Python Unicode编码与它们的ASCII编码相同。也就是说，Python的Unicode字符串中ASCII文本仍然是单字节长度编码；
+
+　　2、ASCII字符以外的字符，其编码就是Unicode标准编码的双字节（或四字节）编码。
+　　　　（笔者猜想，之所以Python社群要制订如此古怪的标准，可能是想保证ASCII字符串的通用性吧）
+
+　　通常在Python应用中，Unicode字符串都是作为内部处理时使用，而终端显示工作则由传统的Python字符串完成（实际上，Python的print语句根本无法打印出双字节的Unicode编码字符）。在Python语言中，传统Python字符串就是所谓的“多字节编码”字符串，用于表示各种被“编码”成为具体字符集编码的字符串（比如GB、BIG5、KOI8-R、JIS、ISO-8859-1，当然也有UTF-8）；而Python Unicode字符串则是“宽字符编码”字符串，表示从具体字符集编码中“解码”出来的Unicode数据。所以通常情况下，一个需要用到Unicode编码的Python应用往往会以如下方式处理字符串数据：
+
+
+复制代码
+def foo(string, encoding = "gb2312"):
+# 1. convert multi-byte string to wide character string
+u_string = unicode(string, encoding)
+
+# 2. do something
+...
+
+# 3. convert wide character string to printable multi-byte string
+return u_string.encode(encoding)
+复制代码
+ 
+
+　　我们可以举出一个例子：经常在Red Hat Linux环境中使用PyGTK2进行XWindow编程的Python同道可能早就发现过这样的情况：如果我们直接写出如下语句：
+
+
+import pygtk
+pygtk.require('2.0')
+import gtk
+
+main = gtk.Window() # create a window
+main.set_title("你好") # NOTICE!
+ 
+
+　　这样的语句在执行时会在终端上出现这样的警告：
+　　Error converting from UTF-8 to 'GB18030': 转换输入中出现无效字符序列并且程序窗口标题不会被置为“你好”；
+
+　　但如果用户安装了中文的codec，并将上文的最后一句改为：
+
+u_string = unicode('你好','gb2312')
+main.set_title(u_string)
+则程序窗口标题将会被正确地设置为“你好”。这是为什么呢？
+
+　　原因很简单。gtk.Window.set_title()方法总是将自己接收的标题字符串看做是一个Unicode字符串。PyGTK系统在接收到用户的main.set_title()这一请求时，将得到的字符串在某处做了如下处理：
+
+
+复制代码
+class Window(gtk.Widget):
+...
+def set_title(self, title_unicode_string):
+...
+# NOTICE! unicode -> multi-byte utf-8
+real_title_string = title_unicode_string.encode('utf-8')
+...
+# pass read_title_string to GTK2 C API to draw the title
+...
+复制代码
+ 
+
+
+　　我们看到，字符串title_unicode_string在程序内部被“编码”成了一个新的字符串：real_title_string。显然，这个real_title_string是一个传统Python字符串，而它的编码用的是UTF-8。在上一节中笔者曾经提到过，GTK2的内部使用的字符串都是按UTF-8编码的，所以，GTK2核心系统在接收到real_title_string后可以正确显示出标题来。
+
+　　那么，如果用户输入的标题是ASCII字符串（比如：“hello world”），又当如何？我们回想一下Python Unicode字符串的定义规则就不难发现，如果用户的输入是ASCII字符串，则对其进行重编码得到的就是其自身。也就是说，如果title_unicode_string的值是ASCII字符串，则real_title_string与title_unicode_string的值将完全一致。而一个ASCII字符串也就是一个UTF-8字符串，把它传递给GTK2系统不会有任何问题。
+
+　　以上我们举的例子是关于Linux下的PyGTK2的，但类似的问题不仅出现在PyGTK中。除了PyGTK之外，现今各种Python绑定的图形包，如PyQT、Tkinter等，多多少少都会遇到与Unicode处理有关的问题。
+
+　　现在我们弄清了Python的Unicode字符串编码机制，但是我们最想知道的问题还是没有解决：我们如何才能让Python支持用Unicode处理中文呢？这个问题我们将在下一节说明。
+
+
+第三节　如何让Python的Unicode字符串支持中文
+
+　　看完这一节的标题，有一些Python同道们可能会有些不以为然：“为什么一定要用Unicode处理中文呢？我们平时用传统Python字符串处理得不是也不错吗？”的确，其实在一般情况下像字符串连接、子串匹配等操作用传统Python字符串也就足够了。但是，如果涉及到一些高级的字符串操作，比如包含多国文字的正则表达式匹配、文本编辑、表达式分析等等，这些大量混杂了单字节和多字节文本的操作如果用传统字符串处理就非常麻烦了。再说，传统字符串始终无法解决那该死的“半个字”问题。而如果我们可以使用Unicode，则这些问题都可以迎刃而解。所以，我们必须正视并设法解决中文Unicode的处理问题。
+
+　　由上一节的介绍我们知道，如果要想利用Python的Unicode机制处理字符串，只要能够拥有一个能够把多字节的中文编码（包括GB编码系列和BIG5系列）和Unicode编码进行双向转换的编码／解码模块就可以了。按照Python的术语，这样的编码／解码模块被称为codec。于是接下来的问题就变成了：我们该如何编写这样一个codec？
+
+　　如果Python的Unicode机制是硬编码在Python核心中的话，那么给Python添加一个新的codec就将是一项艰苦卓绝的工作了。幸亏Python的设计者们没有那么傻，他们提供了一个扩充性极佳的机制，可以非常方便地为Python添加新的codecs。
+
+　　Python的Unicode处理模块有三个最重要的组成部分：一是codecs.py文件，二是encodings目录，三是aliases.py文件。前两者都位于Python系统库的安装目录之中（如果是Win32发行版，就在$PYTHON_HOME/lib/目录下；如果是Red Hat Linux，就在/usr/lib/python-version/目录下，其它系统可以照此寻找），而最后一个则位于encodings目录下。接下来，我们分别对这三者加以说明。
+
+　　先来看看codecs.py文件。这个文件定义了一个标准的Codec模块应有的接口。其具体内容大家可以在自己的Python发行版中找到，在此不再赘述。按照codecs.py文件的定义，一个完整的codec应该至少拥有三个类和一个标准函数：
+
+　　1、Codec类
+
+　　用途：
+　　　　用于将用户传入的缓冲区数据（一个buffer）作为一个传统Python字符串，并将其“解码”为对应的Unicode字符串。一个完整的Codec类定义必须提供Codec.decode()和Codec.encode()两个方法：
+
+
+Codec.decode(input, errors = "strict")
+
+　　用于将输入的数据看做是传统Python字符串，并将其“解码”，转换成对应的Unicode字符串。
+
+　　参数：
+
+　　input：　　　　　　　输入的buffer（可以是字符串，也可以是任何可以转换成字符串表示的对象）
+　　errors：　　　　　　发生转换错误时的处理选择。可选择如下三种取值：
+　　strict（默认值）：　　如果发生错误，则抛出UnicodeError异常；
+　　replace：　　　　　　如果发生错误，则选取一个默认的Unicode编码代替之；
+　　ignore：　　　　　　如果发生错误，则忽略这个字符，并继续分析余下的字符。
+
+　　返回值：
+　　　　一个常数列表（tuple）：首元素为转换后的Unicode字符串，尾元素为输入数据的长度。
+
+
+Codec.encode(input, errors = "strict")
+
+　　用于将输入的数据看做是Unicode字符串，并将其“编码”，转换成对应的传统Python字符串。
+
+　　参数：
+
+　　input：输入的buffer（通常就是Unicode字符串）
+　　errors：发生转换错误时的处理选择。取值规则与Codec.decode()方法相同。
+
+　　返回值：
+　　　　一个常数列表（tuple）：首元素为转换后的传统Python字符串，尾元素为输入数据的长度。
+
+　　2、StreamReader类（通常应该继承自Codec类）
+
+　　用于分析文件输入流。提供所有对文件对象的读取操作，如readline()方法等。
+
+　　3、StreamWriter类（通常应该继承自Codec类）
+
+　　用于分析文件输出流。提供所有对文件对象的写入操作，如writeline()方法等。
+
+　　5、getregentry()函数
+
+　　即“GET REGistry ENTRY”之意，用于获取各个Codec文件中定义的四个关键函数。其函数体统一为：
+
+
+def getregentry():
+return tuple(Codec().encode,Codec().decode,StreamReader,StreamWriter)
+
+　　在以上提到的所有四个类中，实际上只有Codec类和getregentry()函数是必须提供的。必须提供前者是因为它是实际提供转换操作的模块；而后者则是Python系统获得Codec定义的标准接口，所以必须存在。至于StreamReader和StreamWriter，理论上应该可以通过继承codecs.py中的StreamReader和StreamWriter类，并使用它们的默认实现。当然，也有许多codec中将这两个类进行了改写，以实现一些特殊的定制功能。
+
+
+　　接下来我们再说说encodings目录。顾名思义，encodings目录就是Python系统默认的存放所有已经安装的codec的地方。我们可以在这里找到所有Python发行版自带的codecs。习惯上，每一个新的codec都会将自己安装在这里。需要注意的是，Python系统其实并不要求所有的codec都必须安装于此。用户可以将新的codec放在任何自己喜欢的位置，只要Python系统的搜索路径可以找得到就行。
+
+
+　　仅仅将自己写的codec安装在Python能够找到的路径中还不够。要想让Python系统能找到对应的codec，还必须在Python中对其进行注册。要想注册一个新的codec，就必须用到encodings目录下的aliases.py文件。这个文件中只定义了一个哈希表aliases，它的每个键对应着每一个codec在使用时的名称，也就是unicode()内建函数的第二个参数值；而每个键对应的值则是一个字符串，它是这个codec对应的那个处理文件的模块名。比如，Python默认的解析UTF-8的codec是utf_8.py，它存放在encodings子目录下，则aliases哈希表中就有一项表示其对应关系：
+
+
+'utf-8' : 'utf_8', # the module `utf_8' is the codec for UTF-8
+ 
+
+同理，如果我们新写了一个解析‘mycharset’字符集的codec，假设其编码文件为mycodec.py，存放在$PYTHON_HOME/lib/site-packages/mycharset/目录下，则我们就必须在aliases哈希表中加入这么一行：
+
+
+'mycharset' : 'mycharset.mycodec',
+
+这里不必写出mycodec.py的全路径名，因为site-packages目录通常都在Python系统的搜索路径之中。
+
+　　Python解释器在需要分析Unicode字符串时，会自动加载encodings目录下的这个aliases.py文件。如果mycharset已经在系统中注册过，则我们就可以像使用其它内建的编码那样使用我们自己定义的codec了。比如，如果按照上面的方式注册了mycodec.py，则我们就可以这样写：
+
+
+my_unicode_string = unicode(a_multi_byte_string, 'mycharset')
+print my_unicode_string.encode('mycharset')
+
+　　现在我们可以总结一下要编写一个新的codec一共需要那些步骤：
+
+　　首先，我们需要编写一个自己的codec编码／解码模块；
+
+　　其次，我们要把这个模块文件放在一个Python解释器可以找到的地方；
+
+　　最后，我们要在encodings/aliases.py文件中对其进行注册。
+
+
+　　从理论上说，有了这三步，我们就可以将自己的codec安装到系统中去了。不过这样还不算完，还有一个小问题。有时候，我们出于种种原因，不希望随便修改自己的系统文件（比如，一个用户工作在一个集中式的系统中，系统管理员不允许别人对系统文件进行修改）。在以上介绍的步骤中，我们需要修改aliases.py文件的内容，这是一个系统文件。可如果我们不能修改它，难道我们就不能添加新的codec吗？不，我们当然有办法。
+
+　　这个办法就是：在运行时修改encodings.aliases.aliases哈希表的内容。
+
+　　还是使用上面那个假设，如果用户工作系统的管理员不允许用户把mycodec.py的注册信息写入aliases.py，那么我们就可以如此处理：
+
+　　1、将mycodec.py放在一个目录下，比如/home/myname/mycharset/目录；
+
+　　2、这样编写/home/myname/mycharset/__init__.py文件：
+
+
+import encodings.aliases
+
+# update aliases hash map
+encodings.aliases.aliases.update({\
+'mycodec' : 'mycharset.mycodec',\
+}}
+　　以后每次要使用Python时，我们可以将/home/myname/加入搜索路径，并且在使用自己的codec时预先执行：
+
+
+import mycharset # execute the script in mycharset/__init__.py
+ 
+
+　　这样我们就可以在不改动原有系统文件的情况下使用新的codecs了。另外，如果借助Python的site机制，我们还可以让这个import工作自动化。如果大家不知道什么是site，就请在自己的Python交互环境中运行：
+
+
+import site
+print site.__doc__
+
+浏览一下site模块的文档，即可明白个中技巧。如果大家手头有Red Hat Linux v8，v9，还可以参考一下Red Hat的Python发行版中附带的日文codec，看看它是如何实现自动加载的。也许不少同道可能找不到这个日文的codec在哪里，这里列出如下：
+
+
+Red Hat Linux v8：在/usr/lib/python2.2/site-package/japanese/目录下；
+　　Red Hat Linux v9：在/usr/lib/python2.2/lib-dynload/japanese/目录下；
+ 
+
+提示：请Red Hat用户注意site-packages目录下的japanese.pth文件，结合site模块的文档，相信马上就能豁然开朗。
+
+
+结束语
+
+　　记得当初笔者在Dohao论坛上夸下海口：“如果可以的话，我可以为大家编写一个（中文模块）”，现在回想起来，不禁为自己当初的不知天高地厚而汗颜。一个把自己所有的的时间都花在学习上，一个学期只学七门课程，还落得个两门课不及格的傻瓜研究生，哪里有什么资格在大家面前如此嚣张。现如今，第二个学期由于这两门课的缘故负担陡增（十门课呀！），家中老父老母还眼巴巴地等着自己的儿子能给他们挣脸。要想在有限的时间之内，既保证学习，又保证工作（我要承担导师的课程辅导工作，同时还有一个学校的教学改革方案需要我在其中挑大梁），已经是疲于应付，再加上一个中文模块……唉，请恕笔者分身乏术，不得不食言。
+
+　　因此，笔者斗胆，在此和盘托出自己这半年以来的心得，只希望能够找到一批，不，哪怕是一个也好，只要是对这个项目感兴趣的同道中人，能够接下笔者已经整理出来的知识，把一个完整的（至少应该包含GB、BIG5、笔者个人认为甚至还应包括HZ码）中文模块编写出来，贡献给大家（不论是有偿的还是无偿的），那就是我们广大Python爱好者之福了。另外，Python的发行版至今尚未包括任何中文支持模块。既然我等平日深爱Python，如果我们的工作能因此为Python的发展做出一点贡献，何乐而不为呢？
+
+
+附录　几个小小提示
+
+　　1、LUO Jian兄已经编写了一个非常不错的中文模块（Dohao上有链接，文件名是showfile.zip，这个模块比我已经写完的草稿版本要快得多），同时支持GB2312和GB18030编码，可惜不支持BIG5。如果大家有兴趣，可以下载这个模块研究一下；
+
+　　2、和其它字符集编码相比，中文模块有其特殊性，那就是其海量的字符数目。一些相对较小的字符集还好说，比如GB2312，可以利用哈希表查找。而对于巨大的GB18030编码，如果简单地将所有数据制成一个特大的编码对照表，则查询速度会慢得让人无法容忍（笔者在编写模块时最头疼的就是这一点）。如果要编写一个速度上能让人满意的codec，就必须考虑设计某种公式，能够通过简单地运算从一种编码推算出另一种来，或者至少能推算出它的大概范围。这就要求程序员要能对整个编码方案做统计，设法找到规律。笔者认为，这应该是编写中文模块时的最大难点。或许是数学功底实在太差的缘故，笔者费尽心机也未能找出一个规律来。希望能有数学高手不吝赐教；
+

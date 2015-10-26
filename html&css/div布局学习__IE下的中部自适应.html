@@ -1,0 +1,130 @@
+﻿<! doctype=html>
+<html>
+<head>
+	<title>div布局学习__IE下的中部自适应</title>
+	<style>
+	body,html{
+		width：100%;
+		padding: 0;
+		}	
+	#contain{
+		position:relative;
+		top:0;
+		left:0;
+		right:0;
+		margin: 0 auto;
+		text-align:center;
+		width: 100%;
+		background: black;
+
+		}
+		
+	#head{
+		position:relative;
+		text-align:center;
+		top:0;
+		left:0;
+		right:0;
+		margin: 0 auto 5px auto;
+		height:50px;
+		width:100%;
+		background-color:red;
+
+		}
+		
+	#main{
+
+		position:relative;
+		width:100%;
+		background-color: orange;
+		text-align:center;
+		margin-bottom:5px;
+		}
+		
+	#left{
+		position:absolute;
+		top:0px;
+		left:0px;
+		margin:0px;
+		background-color: blue;
+		margin-bottom:5px;
+		width:200px;
+		text-align:center;
+		}
+		
+	#middle{
+		position:relative;
+		
+		margin: 0 200px 5px 200px;
+		padding:0px;
+		background-color: gray;
+		height:200px;
+		width:100%;
+		text-align:center;
+		}
+	
+	#right{
+		position:absolute;
+		right:0;
+		top:0;
+		height:100px;
+		background:yellow;
+		width:200px;
+		text-align:center;
+		margin-bottom:5px;
+		}
+	#foot{
+		position:relative;
+
+		left:0;
+		right:0;
+		background-color:green;
+		width:100%;
+		margin: 0 auto;
+		text-align:center;
+		}
+	
+	</style>
+	
+	</head>
+<body>
+	<div id ="contain">
+		<!---->
+		<div id="head">
+
+       <h1>this is head.</h1>
+
+		</div>
+		
+		<div id="main">
+			
+			<div id="left">
+				
+				left
+			</div>
+			<div id="middle">
+				middle
+			</div>
+			<div id="right">
+				right
+			</div>
+					<div id="foot">
+						this is foot
+
+					</div>
+
+		</div>
+
+
+
+
+
+
+
+
+	</div>
+	
+	
+	
+	</body>
+</html>

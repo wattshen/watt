@@ -1,14 +1,27 @@
 git config --global user.name 用户名　　　（配置用户名）
 git config --global user.email 邮箱　　　（配置用户邮箱）
 
+cd D: 进入Ｄ盘
+git remote -v  显示当前项目路径
+pwd    在终端显示当前目录路径
+
 ssh -T git@github.com 验证远程连接情况
 
 mkdir watt　　创建本地库目录
 cd watt　　　　进入本地库目录
 git init　　初始化仓库
 vi 123.txt　　新建文件
+
+
 git add 123.txt　　添加到暂存库（待提交到本地库）
 git commit　　　　提交到本地库
+
+git remote add origin git@github.com:your-github-name/your-local-name.git
+git push -u origin master　第一次时，使用这个将本地库推送到远程服务器
+git push origin master　　　除第一次外，都用这个将本地库推送到远程服务器
+
+
+
 vi 123.txt　　　　修改文件
 vi 123.txt　　　　再次修改文件
 git add 123.txt　　添加到待提交（到本地库）（可以是已存在的目录或文件名，多个文件时以空格分隔）
@@ -32,9 +45,7 @@ ssh-keygen -t rsa -C "youremail@example.com"　　　创建ＳＳＨ　ＫＥＹ密钥对
 
 
 
-git remote add origin git@github.com:your-github-name/your-local-name.git
-git push -u origin master　第一次时，使用这个将本地库推送到远程服务器
-git push origin master　　　除第一次外，都用这个将本地库推送到远程服务器
+
 
 
 

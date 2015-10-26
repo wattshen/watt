@@ -1,0 +1,5 @@
+<?php
+print_r(filter_list());
+printf("\n");
+filter_id("validate_email");
+?>

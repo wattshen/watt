@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"s",
+				"s_width"
+			],
+			[
+				"nam",
+				"name"
+			],
+			[
+				"la",
+				"label"
+			],
+			[
+				"f",
+				"frist"
+			],
+			[
+				"lab",
+				"label"
+			],
+			[
 				"a",
 				"append"
 			],
@@ -82,10 +102,6 @@
 			[
 				"uni",
 				"unicode"
-			],
-			[
-				"f",
-				"f_time"
 			],
 			[
 				"s_",
@@ -188,6 +204,14 @@
 	"buffers":
 	[
 		{
+			"file": "python/log_ana/all.csv",
+			"settings":
+			{
+				"buffer_size": 2007596,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "python/log_ana/use_nei.py",
 			"settings":
 			{
@@ -196,7 +220,7 @@
 			}
 		},
 		{
-			"contents": "以下分别是文件中的唯一电话、关键词、ＳＩＤ：\n---------------------------------------------------------\n\n\n以下分别是具体的ＳＩＤ、电话在原文件中出现的位置：\n---------------------------------------------------------\n\n\n格式输出：\n用户ppBMVhVVYRNz7bJxg62b5hd4snK5MHwyLd71Xg6Pr1rx5vk6KnFJ!1153822493!1436210485769：\n20150707\n手机号码：13775130607,　时间：032837， 搜索了***<!--***，共得到20条结果，点击了其中的第14条，ＵＲＬ是：service.js.10086.cn/bcma.jsp#DSYX_BL@id=6448\n手机号码：13775130607,　时间：032839， 搜索了***充值优惠***，共得到10条结果，点击了其中的第28条，ＵＲＬ是：service.js.10086.cn/bcma.jsp#DSYX_BL@id=6225\n手机号码：13775130607,　时间：032842， 搜索了***充值优惠***，共得到20条结果，点击了其中的第15条，ＵＲＬ是：service.js.10086.cn/bcma.jsp#DSYX_BL@id=6954\n手机号码：13775130607,　时间：032845， 搜索了***定向漫游***，共得到15条结果，点击了其中的第9条，ＵＲＬ是：/.\\\\./.\\\\./.\\\\./.\\\\./.\\\\./.\\\\./windows/win.ini\n手机号码：13775130607,　时间：032829， 搜索了***充值优惠***，共得到10条结果，点击了其中的第23条，ＵＲＬ是：service.js.10086.cn/XXTZX.html\n手机号码：13775130607,　时间：032831， 搜索了***充值优惠***，共得到21条结果，点击了其中的第2条，ＵＲＬ是：service.js.10086.cn/PPTCBG.html\n手机号码：13775130607,　时间：032848， 搜索了***e***，共得到8条结果，点击了其中的第8条，ＵＲＬ是：？'？\n手机号码：13775130607,　时间：032855， 搜索了***定向漫游***，共得到14条结果，点击了其中的第14条，ＵＲＬ是：？'？\n手机号码：13775130607,　时间：032858， 搜索了***充值优惠***，共得到21条结果，点击了其中的第7条，ＵＲＬ是：？'？\n手机号码：13775130607,　时间：032901， 搜索了***充值优惠***，共得到21条结果，点击了其中的第4条，ＵＲＬ是：../.../.././../.../.././../.../.././../.../.././../.../.././../.../.././windows/win.ini\n手机号码：13775130607,　时间：032904， 搜索了***充值优惠***，共得到10条结果，点击了其中的第28条，ＵＲＬ是：JyI=\n手机号码：13775130607,　时间：032955， 搜索了***e***，共得到8条结果，点击了其中的第4条，ＵＲＬ是：service.js.10086.cn/my/MY_WDJF.html?typeNum=2\n手机号码：13775130607,　时间：033029， 搜索了***e***，共得到8条结果，点击了其中的第7条，ＵＲＬ是：service.js.10086.cn/WLANYW.html\n------------------------------------------\n用户GdJyVbtGwq1ZDs7BDmnnfQqDyh1qvZ6JkJ7nL02TNqkvkDG1wGJ2!1153822493!1436232964922：\n20150707\n手机号码：,　时间：093607， 搜索了***密码重置***，共得到9条结果，点击了其中的第4条，ＵＲＬ是：service.js.10086.cn/my/MY_MMSZ.html?operNum=2\n------------------------------------------\n用户PQQPVbsZT5llgqHMlKsZTv1rHrgqLT7Vv9Vq7pDC8V3JwZ15TKc6!1153822493!1436232953750：\n20150707\n手机号码：13914770736,　时间：093556， 搜索了***密码***，共得到9条结果，点击了其中的第5条，ＵＲＬ是：service.js.10086.cn/my/MY_MMSZ.html?operNum=2\n------------------------------------------\n用户ph1VVbtF52Dzy1H8cjTZY6Vky79jJxS8yHBpjDNjtmYJ2TX8kTGw!1153822493!1436232997428：\n20150707\n手机号码：13405014282,　时间：093639， 搜索了***通用流量***，共得到1条结果，点击了其中的第1条，ＵＲＬ是：service.js.10086.cn/GPRS4G.html\n手机号码：13405014282,　时间：093641， 搜索了***定向漫游***，共得到15条结果，点击了其中的第2条，ＵＲＬ是：service.js.10086.cn/GNMYYHTC.html\n------------------------------------------\n用户2WQNVbyR0cy9Q8pQqHMpsHnm9cvDgch340zpvvrgfyqCCrlz6J52!1153822493!1436231729199：\n20150707\n手机号码：13771618795,　时间：093405， 搜索了***通用***，共得到1条结果，点击了其中的第1条，ＵＲＬ是：service.js.10086.cn/GPRS4G.html\n------------------------------------------\n用户SESSION_ID：\nF_DATE\n手机号码：F_MOBILE,　时间：F_TIME， 搜索了***F_KEYWORD***，共得到F_TOTAL条结果，点击了其中的第F_OFFSET条，ＵＲＬ是：F_URL\n------------------------------------------\n用户h7SnVbtpgnhTR08V4tLKxp77ZLNmrVQwVr6shL4nrcTBBl1y6hXY!1153822493!1436233022413：\n20150707\n手机号码：13773530158,　时间：093705， 搜索了***彩铃***，共得到5条结果，点击了其中的第2条，ＵＲＬ是：service.js.10086.cn/CL.html\n手机号码：13773530158,　时间：093708， 搜索了***定向漫游***，共得到15条结果，点击了其中的第7条，ＵＲＬ是：service.js.10086.cn/DXCT.html\n------------------------------------------\n用户xKhJVbsXYM8CkfDRyjThFlRD30nZs5DGGv7SH092y60JhSJqRyvB!1153822493!1436232823279：\n20150707\n手机号码：,　时间：093350， 搜索了***密码***，共得到9条结果，点击了其中的第3条，ＵＲＬ是：service.js.10086.cn/my/MY_MMSZ.html#home\n------------------------------------------\n用户GV2sVbyRWGqwlwkxQ2J2v9CJDZ0hBM2T1TGNrGJLlpyTnqcyVN8Q!1153822493!1436231697806：\n20150707\n手机号码：13901587826,　时间：093314， 搜索了***短信仓库***，共得到21条结果，点击了其中的第10条，ＵＲＬ是：service.js.10086.cn/DXZZYW.html\n------------------------------------------\n用户pthTVbsSPMGQMsf2lbYmhMYGm9fFynPk9jn11THRHP6LjnMgrfJY!1153822493!1436232818719：\n20150707\n手机号码：15952387479,　时间：093454， 搜索了***通用***，共得到1条结果，点击了其中的第1条，ＵＲＬ是：service.js.10086.cn/GPRS4G.html\n手机号码：15952387479,　时间：093523， 搜索了***流量封顶短信***，共得到21条结果，点击了其中的第3条，ＵＲＬ是：service.js.10086.cn/PPTCBG.html\n------------------------------------------\n用户BG5hVhTcLMPQ7YFs4rt7g0bN971zt9dhKFyQhK6GLvqpyGHQWchK!1954538053!1436209980669：\n20150707\n手机号码：13906236263,　时间：032756， 搜索了***充值优惠***，共得到21条结果，点击了其中的第4条，ＵＲＬ是：service.js.10086.cn/my/MY_WDYH.html\n手机号码：13906236263,　时间：032800， 搜索了***定向漫游***，共得到15条结果，点击了其中的第5条，ＵＲＬ是：service.js.10086.cn/12593GNMY.html\n手机号码：13906236263,　时间：032805， 搜索了***充值优惠***，共得到20条结果，点击了其中的第11条，ＵＲＬ是：service.js.10086.cn/act_js/activity_web/1275/index.html\n手机号码：13906236263,　时间：032812， 搜索了***充值优惠***，共得到10条结果，点击了其中的第24条，ＵＲＬ是：service.js.10086.cn/SJZFYCZ.html\n手机号码：13906236263,　时间：032819， 搜索了***e***，共得到8条结果，点击了其中的第2条，ＵＲＬ是：/../..//../..//../..//../..//../..//etc/passwd\n手机号码：13906236263,　时间：032820， 搜索了***定向漫游***，共得到15条结果，点击了其中的第1条，ＵＲＬ是：service.js.10086.cn/PPTCBG.html\n手机号码：13906236263,　时间：032822， 搜索了***e***，共得到8条结果，点击了其中的第4条，ＵＲＬ是：../../../../../../../../../../boot.ini\n手机号码：13906236263,　时间：032823， 搜索了***e***，共得到8条结果，点击了其中的第4条，ＵＲＬ是：WEB-INF/web.xml?\n手机号码：13906236263,　时间：032825， 搜索了***定向漫游***，共得到15条结果，点击了其中的第3条，ＵＲＬ是：service.js.10086.cn/SNMYYHTC5Y.html\n------------------------------------------\n用户SYQPVbsLHM11NRmJBm1n1fllJCSbRhwwNbPYZ8J2GVlZTg3Cmz0z!1153822493!1436232939119：\n20150707\n手机号码：,　时间：093540， 搜索了***通用***，共得到1条结果，点击了其中的第1条，ＵＲＬ是：service.js.10086.cn/GPRS4G.html\n------------------------------------------\n用户hXlWVbrPSMny1r1HQ1rDbWRjQ1nCRct6TVv67pzHV1n8Dhh63zRP!1153822493!1436232655842：\n20150707\n手机号码：13812143588,　时间：093415， 搜索了***通用***，共得到1条结果，点击了其中的第1条，ＵＲＬ是：service.js.10086.cn/GPRS4G.html\n手机号码：13812143588,　时间：093418， 搜索了***密码重置***，共得到9条结果，点击了其中的第4条，ＵＲＬ是：service.js.10086.cn/my/MY_MMSZ.html?operNum=2\n手机号码：13861488718,　时间：093619， 搜索了***通用***，共得到1条结果，点击了其中的第1条，ＵＲＬ是：service.js.10086.cn/GPRS4G.html\n------------------------------------------\n用户8dgJVbsTysXRM2vqRHHxDHJfS1Jlzp5kpsLTbyV1QT88VGyRvyBn!1153822493!1436232782704：\n20150707\n手机号码：13806181356,　时间：093328， 搜索了***通用***，共得到1条结果，点击了其中的第1条，ＵＲＬ是：service.js.10086.cn/GPRS4G.html\n手机号码：13806181356,　时间：093331， 搜索了***家庭网***，共得到8条结果，点击了其中的第1条，ＵＲＬ是：service.js.10086.cn/JTDHYY.html\n------------------------------------------\n\n\n---------------------------------------------------------\n本次处理开始于2015-07-19 17:04:05.518000，结束于2015-07-19 17:04:05.592000\n\n***Repl Closed***\n",
+			"contents": "以下分别是文件中的唯一电话、关键词、ＳＩＤ：\n---------------------------------------------------------\n\n\n以下分别是具体的ＳＩＤ、电话在原文件中出现的位置：\n---------------------------------------------------------\n\n\n格式输出：\n用户ppBMVhVVYRNz7bJxg62b5hd4snK5MHwyLd71Xg6Pr1rx5vk6KnFJ!1153822493!1436210485769：\n20150707\n手机号码：13775130607,　时间：032837， 搜索了***<!--***，共得到20条结果，点击了其中的第14条，ＵＲＬ是：service.js.10086.cn/bcma.jsp#DSYX_BL@id=6448\n手机号码：13775130607,　时间：032839， 搜索了***充值优惠***，共得到10条结果，点击了其中的第28条，ＵＲＬ是：service.js.10086.cn/bcma.jsp#DSYX_BL@id=6225\n手机号码：13775130607,　时间：032842， 搜索了***充值优惠***，共得到20条结果，点击了其中的第15条，ＵＲＬ是：service.js.10086.cn/bcma.jsp#DSYX_BL@id=6954\n手机号码：13775130607,　时间：032845， 搜索了***定向漫游***，共得到15条结果，点击了其中的第9条，ＵＲＬ是：/.\\\\./.\\\\./.\\\\./.\\\\./.\\\\./.\\\\./windows/win.ini\n手机号码：13775130607,　时间：032829， 搜索了***充值优惠***，共得到10条结果，点击了其中的第23条，ＵＲＬ是：service.js.10086.cn/XXTZX.html\n手机号码：13775130607,　时间：032831， 搜索了***充值优惠***，共得到21条结果，点击了其中的第2条，ＵＲＬ是：service.js.10086.cn/PPTCBG.html\n手机号码：13775130607,　时间：032848， 搜索了***e***，共得到8条结果，点击了其中的第8条，ＵＲＬ是：？'？\n手机号码：13775130607,　时间：032855， 搜索了***定向漫游***，共得到14条结果，点击了其中的第14条，ＵＲＬ是：？'？\n手机号码：13775130607,　时间：032858， 搜索了***充值优惠***，共得到21条结果，点击了其中的第7条，ＵＲＬ是：？'？\n手机号码：13775130607,　时间：032901， 搜索了***充值优惠***，共得到21条结果，点击了其中的第4条，ＵＲＬ是：../.../.././../.../.././../.../.././../.../.././../.../.././../.../.././windows/win.ini\n手机号码：13775130607,　时间：032904， 搜索了***充值优惠***，共得到10条结果，点击了其中的第28条，ＵＲＬ是：JyI=\n手机号码：13775130607,　时间：032955， 搜索了***e***，共得到8条结果，点击了其中的第4条，ＵＲＬ是：service.js.10086.cn/my/MY_WDJF.html?typeNum=2\n手机号码：13775130607,　时间：033029， 搜索了***e***，共得到8条结果，点击了其中的第7条，ＵＲＬ是：service.js.10086.cn/WLANYW.html\n------------------------------------------\n用户GdJyVbtGwq1ZDs7BDmnnfQqDyh1qvZ6JkJ7nL02TNqkvkDG1wGJ2!1153822493!1436232964922：\n20150707\n手机号码：,　时间：093607， 搜索了***密码重置***，共得到9条结果，点击了其中的第4条，ＵＲＬ是：service.js.10086.cn/my/MY_MMSZ.html?operNum=2\n------------------------------------------\n用户PQQPVbsZT5llgqHMlKsZTv1rHrgqLT7Vv9Vq7pDC8V3JwZ15TKc6!1153822493!1436232953750：\n20150707\n手机号码：13914770736,　时间：093556， 搜索了***密码***，共得到9条结果，点击了其中的第5条，ＵＲＬ是：service.js.10086.cn/my/MY_MMSZ.html?operNum=2\n------------------------------------------\n用户ph1VVbtF52Dzy1H8cjTZY6Vky79jJxS8yHBpjDNjtmYJ2TX8kTGw!1153822493!1436232997428：\n20150707\n手机号码：13405014282,　时间：093639， 搜索了***通用流量***，共得到1条结果，点击了其中的第1条，ＵＲＬ是：service.js.10086.cn/GPRS4G.html\n手机号码：13405014282,　时间：093641， 搜索了***定向漫游***，共得到15条结果，点击了其中的第2条，ＵＲＬ是：service.js.10086.cn/GNMYYHTC.html\n------------------------------------------\n用户2WQNVbyR0cy9Q8pQqHMpsHnm9cvDgch340zpvvrgfyqCCrlz6J52!1153822493!1436231729199：\n20150707\n手机号码：13771618795,　时间：093405， 搜索了***通用***，共得到1条结果，点击了其中的第1条，ＵＲＬ是：service.js.10086.cn/GPRS4G.html\n------------------------------------------\n用户SESSION_ID：\nF_DATE\n手机号码：F_MOBILE,　时间：F_TIME， 搜索了***F_KEYWORD***，共得到F_TOTAL条结果，点击了其中的第F_OFFSET条，ＵＲＬ是：F_URL\n------------------------------------------\n用户h7SnVbtpgnhTR08V4tLKxp77ZLNmrVQwVr6shL4nrcTBBl1y6hXY!1153822493!1436233022413：\n20150707\n手机号码：13773530158,　时间：093705， 搜索了***彩铃***，共得到5条结果，点击了其中的第2条，ＵＲＬ是：service.js.10086.cn/CL.html\n手机号码：13773530158,　时间：093708， 搜索了***定向漫游***，共得到15条结果，点击了其中的第7条，ＵＲＬ是：service.js.10086.cn/DXCT.html\n------------------------------------------\n用户xKhJVbsXYM8CkfDRyjThFlRD30nZs5DGGv7SH092y60JhSJqRyvB!1153822493!1436232823279：\n20150707\n手机号码：,　时间：093350， 搜索了***密码***，共得到9条结果，点击了其中的第3条，ＵＲＬ是：service.js.10086.cn/my/MY_MMSZ.html#home\n------------------------------------------\n用户GV2sVbyRWGqwlwkxQ2J2v9CJDZ0hBM2T1TGNrGJLlpyTnqcyVN8Q!1153822493!1436231697806：\n20150707\n手机号码：13901587826,　时间：093314， 搜索了***短信仓库***，共得到21条结果，点击了其中的第10条，ＵＲＬ是：service.js.10086.cn/DXZZYW.html\n------------------------------------------\n用户pthTVbsSPMGQMsf2lbYmhMYGm9fFynPk9jn11THRHP6LjnMgrfJY!1153822493!1436232818719：\n20150707\n手机号码：15952387479,　时间：093454， 搜索了***通用***，共得到1条结果，点击了其中的第1条，ＵＲＬ是：service.js.10086.cn/GPRS4G.html\n手机号码：15952387479,　时间：093523， 搜索了***流量封顶短信***，共得到21条结果，点击了其中的第3条，ＵＲＬ是：service.js.10086.cn/PPTCBG.html\n------------------------------------------\n用户BG5hVhTcLMPQ7YFs4rt7g0bN971zt9dhKFyQhK6GLvqpyGHQWchK!1954538053!1436209980669：\n20150707\n手机号码：13906236263,　时间：032756， 搜索了***充值优惠***，共得到21条结果，点击了其中的第4条，ＵＲＬ是：service.js.10086.cn/my/MY_WDYH.html\n手机号码：13906236263,　时间：032800， 搜索了***定向漫游***，共得到15条结果，点击了其中的第5条，ＵＲＬ是：service.js.10086.cn/12593GNMY.html\n手机号码：13906236263,　时间：032805， 搜索了***充值优惠***，共得到20条结果，点击了其中的第11条，ＵＲＬ是：service.js.10086.cn/act_js/activity_web/1275/index.html\n手机号码：13906236263,　时间：032812， 搜索了***充值优惠***，共得到10条结果，点击了其中的第24条，ＵＲＬ是：service.js.10086.cn/SJZFYCZ.html\n手机号码：13906236263,　时间：032819， 搜索了***e***，共得到8条结果，点击了其中的第2条，ＵＲＬ是：/../..//../..//../..//../..//../..//etc/passwd\n手机号码：13906236263,　时间：032820， 搜索了***定向漫游***，共得到15条结果，点击了其中的第1条，ＵＲＬ是：service.js.10086.cn/PPTCBG.html\n手机号码：13906236263,　时间：032822， 搜索了***e***，共得到8条结果，点击了其中的第4条，ＵＲＬ是：../../../../../../../../../../boot.ini\n手机号码：13906236263,　时间：032823， 搜索了***e***，共得到8条结果，点击了其中的第4条，ＵＲＬ是：WEB-INF/web.xml?\n手机号码：13906236263,　时间：032825， 搜索了***定向漫游***，共得到15条结果，点击了其中的第3条，ＵＲＬ是：service.js.10086.cn/SNMYYHTC5Y.html\n------------------------------------------\n用户SYQPVbsLHM11NRmJBm1n1fllJCSbRhwwNbPYZ8J2GVlZTg3Cmz0z!1153822493!1436232939119：\n20150707\n手机号码：,　时间：093540， 搜索了***通用***，共得到1条结果，点击了其中的第1条，ＵＲＬ是：service.js.10086.cn/GPRS4G.html\n------------------------------------------\n用户hXlWVbrPSMny1r1HQ1rDbWRjQ1nCRct6TVv67pzHV1n8Dhh63zRP!1153822493!1436232655842：\n20150707\n手机号码：13812143588,　时间：093415， 搜索了***通用***，共得到1条结果，点击了其中的第1条，ＵＲＬ是：service.js.10086.cn/GPRS4G.html\n手机号码：13812143588,　时间：093418， 搜索了***密码重置***，共得到9条结果，点击了其中的第4条，ＵＲＬ是：service.js.10086.cn/my/MY_MMSZ.html?operNum=2\n手机号码：13861488718,　时间：093619， 搜索了***通用***，共得到1条结果，点击了其中的第1条，ＵＲＬ是：service.js.10086.cn/GPRS4G.html\n------------------------------------------\n用户8dgJVbsTysXRM2vqRHHxDHJfS1Jlzp5kpsLTbyV1QT88VGyRvyBn!1153822493!1436232782704：\n20150707\n手机号码：13806181356,　时间：093328， 搜索了***通用***，共得到1条结果，点击了其中的第1条，ＵＲＬ是：service.js.10086.cn/GPRS4G.html\n手机号码：13806181356,　时间：093331， 搜索了***家庭网***，共得到8条结果，点击了其中的第1条，ＵＲＬ是：service.js.10086.cn/JTDHYY.html\n------------------------------------------\n\n\n---------------------------------------------------------\n本次处理开始于2015-07-25 18:14:17.672000，结束于2015-07-25 18:14:17.812000\n\n***Repl Closed***\n",
 			"settings":
 			{
 				"buffer_size": 6083,
@@ -207,11 +231,21 @@
 			}
 		},
 		{
-			"file": "python/log_ana/n_juhe.py",
+			"contents": "001500215092417856",
 			"settings":
 			{
-				"buffer_size": 2611,
+				"buffer_size": 18,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Package Control Messages\n========================\n\nPackage Control:\n---------------\n\n  Version 3.1 Release Notes\n  \n  Package Control continues its focus on polish and fixing edge-case bugs. Some\n  of the changes in this version include:\n  \n   - quick panel for Install Package now stays open on Windows with recent\n     versions of ST3, even when focus is lost\n   - new \"downloader_precedence\" setting to allow users to use specific HTTP\n     backend due to network proxy or SSL issues\n   - added Install Local Dependency command for package developers to more\n     easily deal with dependencies during development\n   - improved handling of git/hg package upgrade errors\n   - better handling of locked .sublime-package files on Windows\n   - performance improvements for users with a large number of open windows\n  \n  For package developers, the list of available dependencies has been growing:\n  https://github.com/wbond/package_control_channel/blob/master/repository/dependencies.json\n  \n  Enjoy!\n  \n  ",
+			"settings":
+			{
+				"buffer_size": 1004,
+				"line_ending": "Windows",
+				"name": "Package Control Messages",
+				"scratch": true
 			}
 		}
 	],
@@ -334,12 +368,14 @@
 	],
 	"file_history":
 	[
+		"/G/watt/python/log_ana/learn.py",
+		"/G/watt/python/log_ana/use_nei.py",
+		"/G/watt/python/log_ana/n_juhe.py",
 		"/G/watt/python/log_ana/20150707.csv",
 		"/G/watt/python/log_ana/all.csv",
 		"/G/watt/python/log_ana/main_7.py",
 		"/G/watt/python/log_ana/n_split.py",
 		"/E/百度云/2-技能技巧/git_study.txt",
-		"/G/watt/python/log_ana/n_juhe.py",
 		"/G/watt/python/log_ana/f_out_1.txt",
 		"/G/watt/python/log_ana/main_6.py",
 		"/G/watt/python/log_ana/f_out.txt",
@@ -472,6 +508,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"})",
 			"ppBMVhVVYRNz7bJxg62b5hd4snK5MHwyLd71Xg6Pr1rx5vk6KnFJ!1153822493!1436210485769",
 			"54,",
 			"55,",
@@ -618,13 +655,42 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "python/log_ana/use_nei.py",
+					"file": "python/log_ana/all.csv",
 					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2007596,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								355,
+								355
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "python/log_ana/use_nei.py",
+					"semi_transient": true,
 					"settings":
 					{
 						"buffer_size": 1077,
@@ -634,25 +700,24 @@
 						"selection":
 						[
 							[
-								435,
-								435
+								733,
+								733
 							]
 						],
 						"settings":
 						{
 							"origin_encoding": "UTF-8",
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Python/Python.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 285.0,
+						"translation.y": 399.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 2,
 					"semi_transient": false,
 					"settings":
 					{
@@ -663,8 +728,8 @@
 						"selection":
 						[
 							[
-								6083,
-								6083
+								219,
+								220
 							]
 						],
 						"settings":
@@ -679,7 +744,7 @@
 							"origin_encoding": "UTF-8",
 							"repl": true,
 							"repl_external_id": "python",
-							"repl_id": "50c86dfacfd74a4fa0c7f2d3a15f8946",
+							"repl_id": "bf56c2f2c3e74342b7067456d2592eb1",
 							"repl_restart_args":
 							{
 								"cmd":
@@ -705,41 +770,67 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 684.0,
+						"translation.y": 114.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "python/log_ana/n_juhe.py",
+					"buffer": 3,
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2611,
+						"buffer_size": 18,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2112,
-								2112
+								18,
+								18
 							]
 						],
 						"settings":
 						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"word_wrap": false
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 200.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1004,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1004,
+								1004
+							]
+						],
+						"settings":
+						{
+							"auto_indent": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]

@@ -2,22 +2,23 @@
 #coding: utf-8 
 #-*-*-  Author: Wattshen       -*-*-
 #-*-*-  Email:34665115@qq.com  -*-*-
-#-*-*-  Filename:.py  -*-*-
+#-*-*-  Filename:use_nei.py  -*-*-
 #-*-*-  Date:  
-#content:
 
 import datetime
 #import n_juhe
 from n_juhe import juhe
 
 '''
-	模块名　类名　方法名　直接import时
-	类名　方法名　from modle_name import class_name
+	直接import时,模块名　类名　方法名可以直接用　
+	以from modle_name import class_name导入时，需以　类名.方法名　　来用
 '''
 start_time = datetime.datetime.now()
+
 f = open(r'G:\watt\python\log_ana\20150707.csv','r+')
 jh = juhe()
 lines = jh.split_line(f)
+
 print "以下分别是文件中的唯一电话、关键词、ＳＩＤ："
 F_MOBILE = jh.cut(lines, 'F_MOBILE')
 F_KEYWORD = jh.cut(lines, 'F_KEYWORD')
@@ -28,7 +29,7 @@ print "---------------------------------------------------------\n\n\n以下分�
 
 p = jh.he(lines, SESSION_ID, 'SESSION_ID')
 
-jh.he(lines, F_MOBILE, 'F_MOBILE')
+#jh.he(lines, F_MOBILE, 'F_MOBILE')
 
 
 print '---------------------------------------------------------\n\n\n格式输出：'

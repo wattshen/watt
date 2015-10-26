@@ -1,0 +1,2 @@
+www.google.com	183.207.228.120
+www.baidu.com	111.13.100.92

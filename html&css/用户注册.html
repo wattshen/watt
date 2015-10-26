@@ -1,0 +1,44 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>
+    		<meta http-equiv="pragma" content="no-cache">
+   			<meta http-equiv="Cache-Control" content="no-cache,must-revalidate">
+		
+		    <link type="text/css" rel="stylesheet" href="../misc/skin/df/regist.personal.css?t=0813"/>
+    		<link type="text/css" rel="stylesheet" href="../misc/skin/df/passport.base.css"/>
+    		<script type="text/javascript" src="../misc/js/jquery-1.2.6.pack.js"></script>
+	</head>
+	
+	<body>
+		<form id="register" method="post" action="register.php" onsubmit="return false;">
+			
+			      <input type="hidden" name="regType" id="regType" value="person"/>
+            <input type="hidden" name="uuid" id="uuid" value="a39f123a-3114-4934-bcbe-cc07c6c49f28"/>
+
+		用户名: <input type="text" id="regName" name="regName" class="text" tabindex="1" autoComplete="off"
+                                   onpaste="return false;"
+                                   value="邮箱/用户名/手机号"
+                                   onfocus="if(this.value=='邮箱/用户名/手机号') this.value='';this.style.color='#333'"
+                                   onblur="if(this.value=='') {this.value='邮箱/用户名/手机号';this.style.color='#999999'}"/><br />
+		
+		
+		
+		请设置密码:<input type="password" id="pwd"name="lname" value="" onpaste="alert('禁止粘贴');return false;"/><br />
+		请重复密码:<input type="password" id="pwd2"name="lname" value="" onpaste="alert('禁止粘贴');return false;"/><br />
+							 <input type="submit" value="Submit" />
+			
+			
+			
+		</form>
+		
+		
+		
+	</body>
+
+</html>

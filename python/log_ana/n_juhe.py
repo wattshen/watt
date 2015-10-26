@@ -12,8 +12,10 @@ import datetime
 __metaclass__ = type
 class juhe():
 	"""docstring for juhe
-
-
+		现在是直接读文件的，可以用迭代器来优化
+		未实现时间排序
+		各步骤之间可能有冗余
+		各步骤的衔接，以及方法的命名有点蛋疼
 	"""
 	def split_line(self, file):
 		'''
@@ -80,6 +82,7 @@ class juhe():
 		'''
 			in:b_dict {str:[int]}
 			out:order
+			暂未解决时间排序问题
 		'''
 		for k, v in b_dict.iteritems():
 			print '用户%s：' % k

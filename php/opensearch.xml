@@ -1,0 +1,7 @@
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+<InputEncoding>GB2312</InputEncoding>
+<ShortName>江苏移动</ShortName>
+<Description>江苏移动搜索</Description>
+<Image height="16" width="16" type="image/x-icon"></Image>
+<Url type="text/html" template="http://www.js.10086.cn/search/search.jsp?"/>
+</OpenSearchDescription>
